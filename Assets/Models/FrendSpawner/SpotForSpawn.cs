@@ -6,14 +6,24 @@ public class SpotForSpawn : MonoBehaviour
 {
     [SerializeField] private List<Transform> _pointForBots;
     private int _indexPoint = 0;
-   
+    private int _currentLvl;
     private void Start()
     {
         
     }
     public int GetAmountFreeSpace()
     {
-        return _pointForBots.Count - _indexPoint;
+        switch (_currentLvl)
+        {
+            case 1:
+                return 10 - _indexPoint;
+
+            case 2:
+                return 20 - _indexPoint;
+            case 3:
+                return _pointForBots.Count - _indexPoint;
+        }
+        return 0;
     }
 
     public void SetSpawnedCharacter(Soldier character)
