@@ -15,6 +15,9 @@ public class KeyBoordInput : InputUser
 
     protected override void GetInputVector()
     {
-        InputVector = _keymove.Player.Move.ReadValue<Vector2>();
+        if (_keymove.Player.Move.ReadValue<Vector2>() != null)
+        {
+            InputVector = _keymove.Player.Move.ReadValue<Vector2>();
+        }
     }
 }

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3988335147193043205}
   - component: {fileID: 3972588562891646237}
   - component: {fileID: 3964315164548128285}
-  - component: {fileID: 4014111065012661133}
+  - component: {fileID: 3559998083887323642}
+  - component: {fileID: 1534019724721355480}
   m_Layer: 0
   m_Name: SM_Prop_Money_Note_01
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3986475020106054337}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.91, y: 0.00000047683716, z: 19.27509}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 17.3469, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,17 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4014111065012661133
-MeshCollider:
+--- !u!65 &3559998083887323642
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3986475020106054337}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43585470400916524, guid: 53be9cb924972b040bc386d10e171f52, type: 2}
+  serializedVersion: 2
+  m_Size: {x: 0.27351826, y: 0.0036941848, z: 0.11140211}
+  m_Center: {x: 0, y: 0.0018470924, z: 0}
+--- !u!114 &1534019724721355480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986475020106054337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c2cf62700f4274fbc16c76aaa78e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsCollect: 0
