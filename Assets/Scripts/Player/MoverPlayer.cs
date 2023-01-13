@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-using Agava.YandexGames;
-using Agava.VKGames;
+//using Agava.YandexGames;
 
 public class MoverPlayer : MonoBehaviour
 {
@@ -28,9 +27,6 @@ public class MoverPlayer : MonoBehaviour
             _variableJoystick.gameObject.SetActive(true);
             _variableJoystick.Init(this);
         }
-#elif UNITY_WEBGL && VK_GAMES
-            _variableJoystick.gameObject.SetActive(true);
-            _variableJoystick.Init(this);
 #endif
     }
 
