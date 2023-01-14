@@ -12,27 +12,22 @@ public  class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (_time>= _delay)
+        _time += Time.deltaTime;
+
+        if (_time >= _delay)
         {
             SpawnCharacter();
             _time = 0;
         }
-
-        _time += Time.deltaTime;
-
     }
 
     private void SpawnCharacter()
     {
-       int count = _spotForSpawn.GetAmountFreeSpace();
+       int countFreeSpace = _spotForSpawn.GetAmountFreeSpace();
 
-        if (count> 0)
+        if (countFreeSpace > 0)
         {
             _spotForSpawn.SetSpawnedCharacter(Instantiate(_character, transform.position, Quaternion.identity));
-
         }
-
     }
-    
-    
 }

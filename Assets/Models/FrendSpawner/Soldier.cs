@@ -8,6 +8,4 @@ public class Soldier : MonoBehaviour
     {
         Debug.Log(point.name);
     }
-
-   
 }
