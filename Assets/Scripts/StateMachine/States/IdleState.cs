@@ -6,12 +6,13 @@ public class IdleState : State
 {
   [SerializeField] private ChaseState _chaseState;
 
-    private bool _isCanSeeTarget;
+    public bool _isInAttack;
 
     public override State RunCurrentState()
     {
-        if (_isCanSeeTarget)
+        if (_isInAttack)
         {
+            _chaseState.ReachThePosition();
             return _chaseState;
         }
         else
