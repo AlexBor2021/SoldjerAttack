@@ -13,10 +13,10 @@ public class SpotForSpawn : MonoBehaviour
 
     private void Awake()
     {
-        InintPointForBots();
+        InitPointForBots();
     }
 
-    private void InintPointForBots()
+    private void InitPointForBots()
     {
         for (int i = 0; i < _pointForBots[_currentLvl].transform.childCount; i++)
         {
