@@ -2515,22 +2515,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1477757552, guid: d4acc0d4dcb8b0e4f8e30bce47685987, type: 3}
-      propertyPath: m_Radius
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1477757552, guid: d4acc0d4dcb8b0e4f8e30bce47685987, type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1477757552, guid: d4acc0d4dcb8b0e4f8e30bce47685987, type: 3}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1477757552, guid: d4acc0d4dcb8b0e4f8e30bce47685987, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 857202549870651385, guid: d4acc0d4dcb8b0e4f8e30bce47685987, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3038,6 +3022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackState: {fileID: 2168151781920321515}
+  _soldier: {fileID: 0}
+  _durationForPosition: 5
 --- !u!1 &300780337054337212
 GameObject:
   m_ObjectHideFlags: 0
@@ -10513,3 +10499,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chaseState: {fileID: 259773124285444361}
+  _isInAttack: 0
