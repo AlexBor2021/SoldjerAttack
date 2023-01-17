@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Soldier : MonoBehaviour
 {
-   public void GetStartPoint(Transform point)
+    public Transform MovePoint { get; private set; }
+    public Transform WarPoint { get; private set; }
+
+
+
+    public void SetStartPoint(Transform point, Transform warPoint)
     {
-        Debug.Log(point.name);
+        MovePoint = point;
+        WarPoint = warPoint;
     }
 }
