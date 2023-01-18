@@ -26,12 +26,12 @@ public class BagMoney : MonoBehaviour
     {
         StopCoroutine(_takemoney);
     }
-    public void TakeMoney(Transform parent, int price, Buyer buyer)
+    public void TakeMoney(Transform _placeMoveMoney, int price, BuyAndUpgrade buyAndUpgrade)
     {
-        _takemoney = StartCoroutine(TakingMoney(parent, price, buyer));
+        _takemoney = StartCoroutine(TakingMoney(_placeMoveMoney, price, buyAndUpgrade));
     }
 
-    private IEnumerator TakingMoney(Transform parent, int price, Buyer buyer)
+    private IEnumerator TakingMoney(Transform parent, int price, BuyAndUpgrade buyAndUpgrade)
     {
             while (_moneys.Count != 0)
             {
@@ -41,7 +41,7 @@ public class BagMoney : MonoBehaviour
                     _moneys.RemoveAt(_moneys.Count - 1);
                     _heightY -= _heightDiference;
 
-                    buyer.CameMoney();
+                    buyAndUpgrade.CameMoney();
 
                     if (_moneys.Count == 0)
                     {

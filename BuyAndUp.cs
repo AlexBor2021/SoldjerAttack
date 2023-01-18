@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Buyer : MonoBehaviour
+public class BuyAndUp : BuyAndUpgrade
 {
     [SerializeField] private int _prise;
     [SerializeField] private TextMeshProUGUI _priseText;
     [SerializeField] private TextMeshProUGUI _moneyTaking;
     [SerializeField] private GameObject _objectBuy;
+    [SerializeField] private List<int>_priseUpgrade;
 
     private int _takeMoney;
     private BagMoney _bagMoney;
+    private int _currentLevelUpgrade = 1;
 
     private void Start()
     {
@@ -39,11 +41,21 @@ public class Buyer : MonoBehaviour
 
         _moneyTaking.text = _takeMoney.ToString();
 
-        if (_takeMoney == _prise)
+        if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
             _objectBuy.SetActive(true);
-            gameObject.SetActive(false);
             _bagMoney.StopTakeMoney();
+            _priseText.text = _priseUpgrade[0].ToString();
+            _takeMoney = 0;
         }
+        else if(_takeMoney == _priseUpgrade[0])
+        {
+            _priseUpgrade.RemoveAt(0);
+        }
+    }
+
+    public void UpgradeObject(int levelUpgrade)
+    {
+
     }
 }
