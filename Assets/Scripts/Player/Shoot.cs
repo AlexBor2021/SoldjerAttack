@@ -7,38 +7,16 @@ public class Shoot : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private ParticleSystem _effectShoot;
     [SerializeField] private Player _player;
-    [SerializeField] private Transform _positionRaycast;
+    [SerializeField] private Rigidbody _playeRb;
 
     private Enemy _enemy;
     private Coroutine _damageTakeCor;
-    private bool _isShoot;
-
 
     private void OnEnable()
     {
         _effectShoot.Stop();
     }
-    private void FixedUpdate()
-    {
-        //Ray _ray = new Ray(_positionRaycast.position, Vector3.forward);
-        //Physics.Raycast(_ray, out RaycastHit _raycastHit, 4f);
-
-        Vector3 forvard = transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(transform.position, forvard, Color.red);
-
-        //_raycastHit.collider.TryGetComponent(out Enemy enemy);
-
-        //if (enemy == _enemy && _enemy != null)
-        //{
-        //    _isShoot = true;
-        //    Debug.Log(1);
-        //}
-        //else
-        //{
-        //    _isShoot = false;
-        //    Debug.Log(2);
-        //}
-    }
+   
     private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent<Enemy>(out Enemy enemy))
@@ -63,12 +41,13 @@ public class Shoot : MonoBehaviour
     {
         while (_enemy.Health > 0)
         {
-            _player.transform.LookAt(_enemy.transform.position);
-            if (_isShoot)
+            if (_playeRb.velocity.magnitude < 2)
             {
+                _player.transform.LookAt(_enemy.transform.position);
                 _enemy.TakeDamage(_damage);
                 _effectShoot.Play();
             }
+
             yield return new WaitForSeconds(1.5f);
         }
 
