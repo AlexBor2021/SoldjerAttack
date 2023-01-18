@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831053167932690223}
   m_LocalRotation: {x: -0.0026980785, y: 0.004368439, z: 0.9736705, w: 0.2279023}
-  m_LocalPosition: {x: 0.008, y: 0.179, z: 0.233}
+  m_LocalPosition: {x: -0.0936, y: 0.0587, z: 0.234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6808,6 +6808,7 @@ MonoBehaviour:
   _damage: 1
   _effectShoot: {fileID: 6029776263140234221}
   _player: {fileID: 859923231380571774}
+  _positionRaycast: {fileID: 857202549870651385}
 --- !u!1 &4626841127679301514
 GameObject:
   m_ObjectHideFlags: 0
@@ -36874,7 +36875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175629284490945292}
   m_LocalRotation: {x: -0.42634326, y: -0.5501168, z: -0.43896872, w: 0.56825125}
-  m_LocalPosition: {x: 0.065, y: 0.009, z: -0.128}
+  m_LocalPosition: {x: 0.013, y: -0.004, z: -0.128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
