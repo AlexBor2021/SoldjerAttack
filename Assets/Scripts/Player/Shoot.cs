@@ -16,7 +16,14 @@ public class Shoot : MonoBehaviour
     {
         _effectShoot.Stop();
     }
-   
+
+    private void FixedUpdate()
+    {
+        if (_playeRb.velocity.magnitude > 2)
+        {
+            _effectShoot.Stop();
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent<Enemy>(out Enemy enemy))
@@ -48,7 +55,7 @@ public class Shoot : MonoBehaviour
                 _effectShoot.Play();
             }
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
         }
 
         _enemy = null;

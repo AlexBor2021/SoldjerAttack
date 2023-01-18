@@ -6791,7 +6791,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1477757553
 MonoBehaviour:
@@ -6808,7 +6808,7 @@ MonoBehaviour:
   _damage: 1
   _effectShoot: {fileID: 6029776263140234221}
   _player: {fileID: 859923231380571774}
-  _positionRaycast: {fileID: 857202549870651385}
+  _playeRb: {fileID: 6657707733230395197}
 --- !u!1 &4626841127679301514
 GameObject:
   m_ObjectHideFlags: 0
