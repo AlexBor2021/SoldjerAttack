@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class BagMoney : MonoBehaviour
 {
@@ -11,7 +12,14 @@ public class BagMoney : MonoBehaviour
 
     private float _heightY = 0;
     private Coroutine _takemoney;
-    
+
+    public event UnityAction<int> ChengedBAgMoney;
+
+    private void OnEnable()
+    {
+        ChengedBAgMoney?.Invoke(_moneys.Count);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Money>(out Money money))
@@ -39,6 +47,7 @@ public class BagMoney : MonoBehaviour
                 {
                     _moneys[_moneys.Count-1].Moving(parent);
                     _moneys.RemoveAt(_moneys.Count - 1);
+                    ChengedBAgMoney?.Invoke(_moneys.Count);
                     _heightY -= _heightDiference;
 
                     buyAndUpgrade.CameMoney();
@@ -75,6 +84,7 @@ public class BagMoney : MonoBehaviour
 
             money.IsCollect = true;
             _moneys.Add(money);
+            ChengedBAgMoney?.Invoke(_moneys.Count);
             _heightY += _heightDiference;
         }
     }
