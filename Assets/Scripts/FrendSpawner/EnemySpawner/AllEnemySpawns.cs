@@ -4,12 +4,32 @@ using UnityEngine;
 
 public class AllEnemySpawns : MonoBehaviour
 {
-    [SerializeField] private List<Transform> _allEnemySpawns;
+    [SerializeField] private List<EnemySpawn> _allEnemySpawns;
 
- 
-    public Transform CurrentPointOfAttack()
+    private void OnEnable()
     {
-        return _allEnemySpawns[0];
+        foreach (var enemySpawn in _allEnemySpawns)
+        {
+            enemySpawn.OnSpawnDie += SpawnDie;
+        }
     }
 
+    public Transform CurrentPointOfAttack()
+    {
+        if (_allEnemySpawns.Count==0)
+        {
+
+        }
+        else
+        {
+            return _allEnemySpawns[0].transform;
+
+        }
+        return null;
+    }
+
+    private void SpawnDie(EnemySpawn spawn)
+    {
+        _allEnemySpawns.Remove(spawn);
+    }
 }

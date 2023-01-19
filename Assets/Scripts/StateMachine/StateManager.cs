@@ -17,6 +17,9 @@ public class StateManager : MonoBehaviour
 
         if (nextState != null)
         {
+            _currentState.gameObject.SetActive(false);
+            nextState.gameObject.SetActive(true);
+
             SwitchToTheNextState(nextState);
         }
     }

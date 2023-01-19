@@ -5,7 +5,7 @@ using System;
 
 public abstract class Health : MonoBehaviour
 {
-    public abstract event Action OnDie;
-    public abstract void TakeDamage();
+    public virtual event Action<Health> Die;
+    public abstract void TakeDamage(int damage);
 
 }

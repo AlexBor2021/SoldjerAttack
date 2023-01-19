@@ -6,7 +6,7 @@ public class SpotForSpawn : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _pointForBots;
     [SerializeField] private int _currentLvl;
-    [SerializeField] private AllEnemySpawns _warPoint;
+    [SerializeField] private AllEnemySpawns _warPoints;
 
     private int _indexPoint = 0;
     private List<Transform> _activePointForBots = new();
@@ -34,7 +34,7 @@ public class SpotForSpawn : MonoBehaviour
     {
         _compliteSoldiers.Add(character);
 
-        character.SetStartPoint(_activePointForBots[_indexPoint],_warPoint.CurrentPointOfAttack());
+        character.SetStartPoint(_activePointForBots[_indexPoint],_warPoints.CurrentPointOfAttack());
         _indexPoint++;
     }
 
