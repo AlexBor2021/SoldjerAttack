@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SkinPlayerUograde : MonoBehaviour
 {
+    [SerializeField] private GameObject _levelOne;
     [SerializeField] private GameObject _levelTwo;
     [SerializeField] private GameObject _levelTherd;
-    [SerializeField] private GameObject _levelOne;
     
     private GameObject _currentLevel;
 

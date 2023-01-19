@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgardePlayer : BuyAndUpgrade
+public class UpgradeBarak : BuyAndUpgrade
 {
-    [SerializeField] private SkinPlayerUograde _skinPlayerUograde;
     protected override void OffObject()
     {
         gameObject.SetActive(false);
@@ -12,6 +11,6 @@ public class UpgardePlayer : BuyAndUpgrade
 
     protected override void UpgradeObject()
     {
-        _skinPlayerUograde.Upgrade(_currentLevelUpgrade);
+        
     }
 }

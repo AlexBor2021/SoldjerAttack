@@ -12,11 +12,11 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     [SerializeField] protected List<int> _priseUpgrade;
     [SerializeField] protected Transform _placeMoveMoney;
 
-    private int _takeMoney;
-    private BagMoney _bagMoney;
-    private int _currentLevelUpgrade = 1;
+    protected int _takeMoney;
+    protected BagMoney _bagMoney;
+    protected int _currentLevelUpgrade = 1;
 
-    private void Start()
+    private void OnEnable()
     {
         if (_prise > 0)
         {
@@ -31,7 +31,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     {
         if (other.TryGetComponent<BagMoney>(out _bagMoney))
         {
-            _bagMoney.TakeMoney(_placeMoveMoney, _prise, this);
+            TakeMoneyFromBag();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -51,15 +51,22 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
             _objectBuy.SetActive(true);
+            _prise = 0;
+            TakeMoneyFromBag();
             RebootAfterBuy();
         }
-        else if (_takeMoney == _priseUpgrade[0])
+        else if(_priseUpgrade.Count > 0)
         {
-            _priseUpgrade.RemoveAt(0);
-            RebootAfterBuy();
-            UpgradeObject();
+            if (_takeMoney == _priseUpgrade[0])
+            {
+                _currentLevelUpgrade++;
+                _priseUpgrade.RemoveAt(0);
+                TakeMoneyFromBag();
+                RebootAfterBuy();
+                UpgradeObject();
+            }
         }
-        else if (_priseUpgrade.Count == 0)
+        if (_priseUpgrade.Count == 0 && _objectBuy.activeSelf)
         {
             OffObject();
         }
@@ -68,12 +75,27 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     private void RebootAfterBuy()
     {
         _bagMoney.StopTakeMoney();
-        _priseText.text = _priseUpgrade[0].ToString();
+
         _takeMoney = 0;
+
+        if (_priseUpgrade.Count > 0)
+            _priseText.text = _priseUpgrade[0].ToString();
+    }
+
+    private void TakeMoneyFromBag()
+    {
+        if (_prise > 0)
+        {
+            _bagMoney.TakeMoney(_placeMoveMoney, _prise, this);
+        }
+        else
+        {
+            _bagMoney.TakeMoney(_placeMoveMoney, _priseUpgrade[0], this);
+        }
+        
     }
 
     protected abstract void UpgradeObject();
-
     protected abstract void OffObject();
     
 }
