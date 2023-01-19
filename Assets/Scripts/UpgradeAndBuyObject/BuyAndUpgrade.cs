@@ -39,7 +39,6 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         if (other.TryGetComponent<BagMoney>(out _bagMoney))
         {
             _bagMoney.StopTakeMoney();
-            Debug.Log(12);
         }
     }
 
@@ -77,8 +76,6 @@ public abstract class BuyAndUpgrade : MonoBehaviour
 
         if (_priseUpgrade.Count > 0)
             _priseText.text = _priseUpgrade[0].ToString();
-
-        Debug.Log(1);
     }
 
     private void TakeMoneyFromBag()
