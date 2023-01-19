@@ -10,6 +10,8 @@ public class ChaseState : State
     [SerializeField] private float _durationForPosition = 5;
 
     private bool _isInAttackRange = false;
+    private Transform _currentEnemy;
+    private DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> _currentWarPoint;
 
     public override State RunCurrentState()
     {
@@ -25,13 +27,23 @@ public class ChaseState : State
 
     public void ReachThePosition()
     {
-       _soldier.transform.DOMove(_soldier.WarPoint.position, _durationForPosition);
+        _currentWarPoint = _soldier.transform.DOMove(_soldier.WarPoint.position, _durationForPosition);
     }
+
+    public Transform CurrentAim()
+    {
+        return _currentEnemy;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Enemy>())
         {
+            Debug.Log("увидел врага");
+
             _isInAttackRange = true;
+            DOTween.KillAll();
+            _currentEnemy = other.transform;
         }
 
     }

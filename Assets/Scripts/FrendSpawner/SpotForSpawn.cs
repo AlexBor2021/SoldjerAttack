@@ -6,10 +6,11 @@ public class SpotForSpawn : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _pointForBots;
     [SerializeField] private int _currentLvl;
-    [SerializeField] private Transform _warPoint;
+    [SerializeField] private AllEnemySpawns _warPoints;
 
     private int _indexPoint = 0;
     private List<Transform> _activePointForBots = new();
+    private List<Soldier> _compliteSoldiers = new();
 
     private void Awake()
     {
@@ -31,7 +32,18 @@ public class SpotForSpawn : MonoBehaviour
 
     public void SetSpawnedCharacter(Soldier character)
     {
-        character.SetStartPoint(_activePointForBots[_indexPoint],_warPoint);
+        _compliteSoldiers.Add(character);
+
+        character.SetStartPoint(_activePointForBots[_indexPoint],_warPoints.CurrentPointOfAttack());
         _indexPoint++;
+    }
+
+    public void SignalOnWar()
+    {
+        for (int i = 0; i < _compliteSoldiers.Count; i++)
+        {
+            _compliteSoldiers[i].GetComponentInChildren<IdleState>()._isInAttack = true;
+        }
+        _compliteSoldiers.Clear();
     }
 }

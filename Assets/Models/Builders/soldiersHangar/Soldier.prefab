@@ -64,7 +64,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3292967739780112743
 Transform:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6.93
+  m_Radius: 9.97
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4286268739637069894
 GameObject:
@@ -118,13 +118,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4792532227543382013}
   - component: {fileID: 7737048705074953860}
+  - component: {fileID: 7580323873487699091}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4792532227543382013
 Transform:
   m_ObjectHideFlags: 0
@@ -152,6 +153,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f9edeceaf2f724a878a05923b93a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chaseState: {fileID: 8562380850684289126}
+  _soldier: {fileID: 8697439319863891059}
+--- !u!135 &7580323873487699091
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4286268739637069894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5209121055005674319
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5325401354827182197
 Transform:
   m_ObjectHideFlags: 0
@@ -7416,6 +7432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4363654a04e8f0d4faae6b9877d8d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 0
 --- !u!114 &2702405731235253251
 MonoBehaviour:
   m_ObjectHideFlags: 0
