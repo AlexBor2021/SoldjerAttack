@@ -6,7 +6,7 @@ public class StateManager : MonoBehaviour
 {
    [SerializeField] private State _currentState;
 
-    private void Update()
+    private void FixedUpdate()
     {
         RunStateMachine();
     }
@@ -17,9 +17,6 @@ public class StateManager : MonoBehaviour
 
         if (nextState != null)
         {
-            _currentState.gameObject.SetActive(false);
-            nextState.gameObject.SetActive(true);
-
             SwitchToTheNextState(nextState);
         }
     }

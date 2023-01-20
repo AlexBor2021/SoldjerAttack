@@ -44,9 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac11bc3a1576d04eaee9859fbd2f760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movePoint: {fileID: 8697439319863891059}
-  _duraction: 5
-  _idleState: {fileID: 1178818750666964389}
 --- !u!1 &3774700385917509860
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +61,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3292967739780112743
 Transform:
   m_ObjectHideFlags: 0
@@ -125,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4792532227543382013
 Transform:
   m_ObjectHideFlags: 0
@@ -184,7 +181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5325401354827182197
 Transform:
   m_ObjectHideFlags: 0
@@ -212,7 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a8ec17fe38c8b4283e1a08c79a304c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movePoint: {fileID: 8697439319863891059}
   _chaseState: {fileID: 8562380850684289126}
+  _duraction: 5
   _isInAttack: 0
 --- !u!1 &7638106526533548479
 GameObject:
@@ -7375,6 +7374,7 @@ GameObject:
   - component: {fileID: 7759808543633920645}
   - component: {fileID: 8697439319863891059}
   - component: {fileID: 2702405731235253251}
+  - component: {fileID: 7670726651760374503}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -7432,7 +7432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4363654a04e8f0d4faae6b9877d8d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 0
+  _damage: 10
+  _health: 100
 --- !u!114 &2702405731235253251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7445,7 +7446,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002db92a5bb0f05438189f4db2803dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentState: {fileID: 1198831718}
+  _currentState: {fileID: 1178818750666964389}
+--- !u!136 &7670726651760374503
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7703398303424182021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.44
+  m_Height: 2.27
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.14, z: 0}
 --- !u!1 &7703399849157856863
 GameObject:
   m_ObjectHideFlags: 0
