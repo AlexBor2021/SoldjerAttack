@@ -1,22 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
 public class ChaseState : State
 {
     [SerializeField] private AttackState _attackState;
     [SerializeField] private Soldier _soldier;
-    [SerializeField] private float _durationForPosition = 5;
+    [SerializeField] private float _durationForPosition = 3;
 
-    private bool _isInAttackRange = false;
-    private Transform _currentEnemy;
+    public bool _isInAttackRange = false;
+    private Enemy _currentEnemy;
     private DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> _currentWarPoint;
+    public DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> _comingInEnemy;
+
 
     public override State RunCurrentState()
     {
         if (_isInAttackRange)
         {
+            ComeToEnemy();
+            _attackState._currentAim = _currentEnemy;
+            Debug.Log(_currentEnemy.name);
+            _currentEnemy = null;
             return _attackState;
         }
         else
@@ -24,26 +28,23 @@ public class ChaseState : State
             return this;
         }
     }
+    public void ComeToEnemy()
+    {
+        _comingInEnemy = _soldier.transform.DOMove(_currentEnemy.transform.position, 5);
+    }
 
     public void ReachThePosition()
     {
         _currentWarPoint = _soldier.transform.DOMove(_soldier.WarPoint.position, _durationForPosition);
     }
 
-    public Transform CurrentAim()
+    private void OnTriggerStay(Collider other)
     {
-        return _currentEnemy;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<Enemy>())
+        if (other.gameObject.TryGetComponent(out Enemy enemy))
         {
-            Debug.Log("увидел врага");
-
+            _currentEnemy = enemy;
             _isInAttackRange = true;
-            DOTween.KillAll();
-            _currentEnemy = other.transform;
+            _currentWarPoint.Kill();
         }
 
     }

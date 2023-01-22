@@ -45,5 +45,6 @@ public class SpotForSpawn : MonoBehaviour
             _compliteSoldiers[i].GetComponentInChildren<IdleState>()._isInAttack = true;
         }
         _compliteSoldiers.Clear();
+        _indexPoint = 0;
     }
 }

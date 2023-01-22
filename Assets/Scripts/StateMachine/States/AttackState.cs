@@ -7,30 +7,56 @@ public class AttackState : State
 {
     [SerializeField] ChaseState _chaseState;
     [SerializeField] Soldier _soldier;
-    private bool _searchEnemy;
-    private DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> _currentAim;
 
-    private void OnEnable()
-    {
-       _currentAim = _soldier.transform.DOMove(_chaseState.CurrentAim().position,5);
-    }
+    public Enemy _currentAim;
+    private bool _searchEnemy;
+    private Coroutine _shootCorotine = null;
 
     public override State RunCurrentState()
     {
-        if (_searchEnemy)
+        if (_currentAim == null)
         {
+            if (_shootCorotine!= null)
+            {
+                StopCoroutine(_shootCorotine);
+            }
+            _chaseState._isInAttackRange = false;
             return _chaseState;
         }
         return this;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.GetComponent<Enemy>())
+        if (other.gameObject.TryGetComponent(out Enemy enemy))
         {
-            Debug.Log("стрелять");
+            if (enemy == _currentAim)
+            {
+                _chaseState._comingInEnemy.Kill();
+                Debug.Log("нашел цель");
 
-            DOTween.Kill(_currentAim);
+                if (_shootCorotine == null)
+                {
+                    _shootCorotine = StartCoroutine(TakeDamage());
+                }
+            }
         }
+    }
+
+    private IEnumerator TakeDamage()
+    {
+        while (_currentAim.Health > 0)
+        {
+            Debug.Log("Стрелять");
+            _soldier.transform.LookAt(_currentAim.transform.position);
+            _currentAim.TakeDamage(_soldier.Damage);
+          //  _effectShoot.Play();
+
+            yield return new WaitForSeconds(1f);
+        }
+        _currentAim = null;
+        Debug.Log("убил");
+        _shootCorotine = null;
+        yield return null;
     }
 }

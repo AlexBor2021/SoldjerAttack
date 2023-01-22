@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class Soldier : Health
 {
+    [SerializeField] public int _damage;
+
     public Transform MovePoint { get; private set; }
     public Transform WarPoint { get; private set; }
+    public int Damage => _damage;
 
     public override event Action<Health> Die;
 
