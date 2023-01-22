@@ -6,8 +6,10 @@ using UnityEngine;
 public class Enemy : Health
 {
     [SerializeField] private int _health;
+    [SerializeField] private int _damage;
 
     public int Health => _health;
+    public int Damage => _damage;
 
     public override event Action<Health> Die;
 

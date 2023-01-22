@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpgardePlayer : BuyAndUpgrade
 {
-    [SerializeField] private SkinPlayerUograde _skinPlayerUograde;
+    [SerializeField] private SkinPlayerUpgrade _skinPlayerUograde;
     protected override void OffObject()
     {
         gameObject.SetActive(false);

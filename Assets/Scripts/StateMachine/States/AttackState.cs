@@ -5,12 +5,19 @@ using DG.Tweening;
 
 public class AttackState : State
 {
-    [SerializeField] ChaseState _chaseState;
-    [SerializeField] Soldier _soldier;
+    [SerializeField] private ChaseState _chaseState;
+    [SerializeField] private Soldier _soldier;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private ParticleSystem _effectShoot;
 
-    public Enemy _currentAim;
-    private bool _searchEnemy;
     private Coroutine _shootCorotine = null;
+    
+    public Enemy _currentAim;
+
+    private void OnEnable()
+    {
+        _effectShoot.Stop();
+    }
 
     public override State RunCurrentState()
     {
@@ -21,8 +28,10 @@ public class AttackState : State
                 StopCoroutine(_shootCorotine);
             }
             _chaseState._isInAttackRange = false;
+            _animator.SetBool("Run", true);
             return _chaseState;
         }
+        _animator.SetBool("Run", false);
         return this;
     }
 
@@ -32,9 +41,6 @@ public class AttackState : State
         {
             if (enemy == _currentAim)
             {
-                _chaseState._comingInEnemy.Kill();
-                Debug.Log("нашел цель");
-
                 if (_shootCorotine == null)
                 {
                     _shootCorotine = StartCoroutine(TakeDamage());
@@ -47,15 +53,13 @@ public class AttackState : State
     {
         while (_currentAim.Health > 0)
         {
-            Debug.Log("Стрелять");
             _soldier.transform.LookAt(_currentAim.transform.position);
             _currentAim.TakeDamage(_soldier.Damage);
-          //  _effectShoot.Play();
+            _effectShoot.Play();
 
             yield return new WaitForSeconds(1f);
         }
         _currentAim = null;
-        Debug.Log("убил");
         _shootCorotine = null;
         yield return null;
     }

@@ -42,7 +42,7 @@ public class SpotForSpawn : MonoBehaviour
     {
         for (int i = 0; i < _compliteSoldiers.Count; i++)
         {
-            _compliteSoldiers[i].GetComponentInChildren<IdleState>()._isInAttack = true;
+            _compliteSoldiers[i].GetComponentInChildren<IdleState>()._isInChaseState = true;
         }
         _compliteSoldiers.Clear();
         _indexPoint = 0;

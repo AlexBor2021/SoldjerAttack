@@ -8,26 +8,30 @@ public class IdleState : State
 {
     [SerializeField] private Soldier _movePoint;
     [SerializeField] private ChaseState _chaseState;
-    [SerializeField] private float _duraction = 8;
+    [SerializeField] private Animator _animator;
 
-    public bool _isInAttack;
-    private DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> _move;
-
-    private void Start()
-    {
-       _move = _movePoint.transform.DOMove(_movePoint.MovePoint.position, _duraction);
-    }
+    public bool _isInChaseState;
 
     public override State RunCurrentState()
     {
-        if (_isInAttack)
+        if (_isInChaseState)
         {
-            _move.Kill();
-            _chaseState.ReachThePosition();
             return _chaseState;
         }
         else
         {
+            _movePoint.transform.position = Vector3.MoveTowards(_movePoint.transform.position, _movePoint.MovePoint.position, 0.05f);
+           
+            if (_movePoint.transform.position == _movePoint.MovePoint.position)
+            {
+                _animator.SetBool("Run", false);
+            }
+            else
+            {
+                _animator.SetBool("Run", true);
+                _movePoint.transform.LookAt(_movePoint.MovePoint.position, Vector3.up);
+            }
+
             return this;
         }
     }

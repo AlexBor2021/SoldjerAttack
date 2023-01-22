@@ -5,6 +5,7 @@ using UnityEngine;
 public class AllEnemySpawns : MonoBehaviour
 {
     [SerializeField] private List<EnemySpawn> _allEnemySpawns;
+    [SerializeField] private GameObject _panelFinish;
 
     private void OnEnable()
     {
@@ -18,7 +19,8 @@ public class AllEnemySpawns : MonoBehaviour
     {
         if (_allEnemySpawns.Count==0)
         {
-
+            _panelFinish.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {

@@ -5,37 +5,49 @@ public class ChaseState : State
 {
     [SerializeField] private AttackState _attackState;
     [SerializeField] private Soldier _soldier;
+    [SerializeField] private Animator _animator;
     [SerializeField] private float _durationForPosition = 3;
 
-    public bool _isInAttackRange = false;
     private Enemy _currentEnemy;
-    private DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> _currentWarPoint;
-    public DG.Tweening.Core.TweenerCore<Vector3, Vector3, DG.Tweening.Plugins.Options.VectorOptions> _comingInEnemy;
 
+    public bool _isInAttackRange = false;
 
     public override State RunCurrentState()
     {
         if (_isInAttackRange)
         {
-            ComeToEnemy();
-            _attackState._currentAim = _currentEnemy;
-            Debug.Log(_currentEnemy.name);
-            _currentEnemy = null;
-            return _attackState;
+            if (ComeToEnemy())
+            {
+                _attackState._currentAim = _currentEnemy;
+                _currentEnemy = null;
+                _animator.SetBool("Run", false);
+                return _attackState;
+            }
+            else
+                return this;
         }
         else
         {
+            ReachThePosition();
+            _animator.SetBool("Run", true);
             return this;
         }
     }
-    public void ComeToEnemy()
+    private bool ComeToEnemy()
     {
-        _comingInEnemy = _soldier.transform.DOMove(_currentEnemy.transform.position, 5);
+        _soldier.transform.LookAt(_currentEnemy.transform.position, Vector3.up);
+        _soldier.transform.position = Vector3.MoveTowards(_soldier.transform.position, _currentEnemy.transform.position, 0.05f);
+        
+        if (Vector3.Distance(_soldier.transform.position, _currentEnemy.transform.position) < 5)
+            return true;
+        else
+            return false;
     }
 
-    public void ReachThePosition()
+    private void ReachThePosition()
     {
-        _currentWarPoint = _soldier.transform.DOMove(_soldier.WarPoint.position, _durationForPosition);
+        _soldier.transform.LookAt(_soldier.WarPoint.position, Vector3.up);
+        _soldier.transform.position = Vector3.MoveTowards(_soldier.transform.position, _soldier.WarPoint.position, 0.05f);
     }
 
     private void OnTriggerStay(Collider other)
@@ -44,8 +56,6 @@ public class ChaseState : State
         {
             _currentEnemy = enemy;
             _isInAttackRange = true;
-            _currentWarPoint.Kill();
         }
-
     }
 }
