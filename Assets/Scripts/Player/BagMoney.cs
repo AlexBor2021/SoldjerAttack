@@ -52,13 +52,15 @@ public class BagMoney : MonoBehaviour
 
                     buyAndUpgrade.CameMoney();
 
-                    if (_moneys.Count == 0)
+                    Debug.Log("идет куратина");
+                    if (_moneys.Count == 0 || buyAndUpgrade.CheckIsUpgrade())
                     {
+                        Debug.Log("нет апгрейда");
                         StopCoroutine(_takemoney);
                         break;
                     }
 
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(0.3f);
                 }
             }
 

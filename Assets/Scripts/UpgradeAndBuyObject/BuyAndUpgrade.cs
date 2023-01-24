@@ -50,6 +50,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
 
         if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
+            Debug.Log(12345);
             _objectBuy.SetActive(true);
             _prise = 0;
             TakeMoneyFromBag();
@@ -59,12 +60,26 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         {
             if (_takeMoney == _priseUpgrade[0])
             {
+                Debug.Log(123456);
                 _currentLevelUpgrade++;
                 _priseUpgrade.RemoveAt(0);
                 TakeMoneyFromBag();
                 RebootAfterBuy();
                 UpgradeObject();
             }
+        }
+    }
+
+    public bool CheckIsUpgrade()
+    {
+        if (_priseUpgrade.Count <= 0)
+        {
+            OffObject();
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -80,6 +95,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
 
     private void TakeMoneyFromBag()
     {
+        Debug.Log(1234);
         if (_prise > 0)
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _prise, this);
@@ -88,11 +104,6 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _priseUpgrade[0], this);
         }
-        else
-        {
-            OffObject();
-        }
-        
     }
 
     protected abstract void UpgradeObject();

@@ -10,8 +10,7 @@ public class AttackStateEnenmy : State
     [SerializeField] private ParticleSystem _effectShoot;
 
     private Coroutine _shootCorotine = null;
-
-    public Soldier _currentAim;
+    private Soldier _currentAim;
 
     private void OnEnable()
     {
@@ -36,31 +35,24 @@ public class AttackStateEnenmy : State
         return this;
     }
 
-    private void OnTriggerStay(Collider other)
+    public void SetAimForAttack(Soldier soldier)
     {
-        if (other.gameObject.TryGetComponent(out Soldier soldier))
-        {
-            Debug.Log(123123);
-            if (_shootCorotine == null)
-            {
-                Debug.Log(1);
-                _currentAim = soldier;
-                _shootCorotine = StartCoroutine(TakeDamage());
-            }
-        }
+        _currentAim = soldier;
+        _shootCorotine = StartCoroutine(TakeDamage());
     }
 
-    private IEnumerator TakeDamage()
+    public IEnumerator TakeDamage()
     {
         while (_currentAim.Health > 0)
         {
-            Debug.Log(1);
-            _currentAim.transform.LookAt(_currentAim.transform.position);
+            _enemy.transform.LookAt(_currentAim.transform.position);
             _currentAim.TakeDamage(_enemy.Damage);
             _effectShoot.Play();
 
             yield return new WaitForSeconds(1f);
         }
+
+        _chaseState.OffAim();
         _currentAim = null;
         _shootCorotine = null;
         yield return null;

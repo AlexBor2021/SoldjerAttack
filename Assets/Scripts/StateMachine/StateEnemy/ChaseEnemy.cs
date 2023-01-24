@@ -18,9 +18,8 @@ public class ChaseEnemy : State
         {
             if (ComeToEnemy())
             {
-                _attackState._currentAim = _currentEnemy;
-                _currentEnemy = null;
                 _animator.SetBool("Run", false);
+                _attackState.SetAimForAttack(_currentEnemy);
                 return _attackState;
             }
             else
@@ -28,9 +27,17 @@ public class ChaseEnemy : State
         }
         else
         {
+            _animator.SetBool("Run", false);
             return this;
         }
     }
+
+    public void OffAim()
+    {
+        _currentEnemy = null;
+        _isInAttackRange = false;
+    }
+
     private bool ComeToEnemy()
     {
         _enemy.transform.LookAt(_currentEnemy.transform.position, Vector3.up);
