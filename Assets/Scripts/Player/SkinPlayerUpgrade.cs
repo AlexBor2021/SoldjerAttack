@@ -27,9 +27,6 @@ public class SkinPlayerUpgrade : MonoBehaviour
             case 3:
                 _currentLevel = _levelTherd;
                 break;
-            default:
-                _currentLevel = _levelOne;
-                break;
         }
 
         _currentLevel.SetActive(true);

@@ -30,4 +30,9 @@ public  class Spawner : MonoBehaviour
             _spotForSpawn.SetSpawnedCharacter(Instantiate(_character, transform.position, Quaternion.identity));
         }
     }
+
+    public void Upgrade()
+    {
+        _delay--;
+    }
 }

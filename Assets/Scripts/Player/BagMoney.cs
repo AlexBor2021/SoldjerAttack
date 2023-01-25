@@ -32,6 +32,8 @@ public class BagMoney : MonoBehaviour
     }
     public void StopTakeMoney()
     {
+        Debug.Log("остановка курутины");
+
         if (_takemoney != null)
             StopCoroutine(_takemoney);
     }
@@ -58,7 +60,7 @@ public class BagMoney : MonoBehaviour
                 if (_moneys.Count == 0 || buyAndUpgrade.CheckIsUpgrade())
                 {
                     Debug.Log("нет апгрейда");
-                    StopCoroutine(_takemoney);
+                    StopTakeMoney();
                 }
 
                 yield return new WaitForSeconds(0.3f);
