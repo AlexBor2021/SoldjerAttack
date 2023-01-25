@@ -25,6 +25,5 @@ public class UpgradeBarak : BuyAndUpgrade
         _currentBarak = _upgrades[_currentLevelUpgrade-1];
         _currentBarak.SetActive(true);
         _spawner.Upgrade();
-        
     }
 }
