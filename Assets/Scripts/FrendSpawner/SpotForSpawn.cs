@@ -33,8 +33,9 @@ public class SpotForSpawn : MonoBehaviour
     public void SetSpawnedCharacter(Soldier character)
     {
         _compliteSoldiers.Add(character);
-
+        character.Dead += SoldierDead;
         character.SetStartPoint(_activePointForBots[_indexPoint],_warPoints.CurrentPointOfAttack());
+
         _indexPoint++;
     }
 
@@ -44,7 +45,22 @@ public class SpotForSpawn : MonoBehaviour
         {
             _compliteSoldiers[i].GetComponentInChildren<IdleState>()._isInChaseState = true;
         }
-        _compliteSoldiers.Clear();
+       // _compliteSoldiers.Clear();
         _indexPoint = 0;
+    }
+
+    private void SoldierDead(Soldier soldier)
+    {
+        soldier.Dead -= SoldierDead;
+
+        _compliteSoldiers.Remove(soldier);
+    }
+
+    public void ChangingWarPointForBots(Transform warPoint)
+    {
+        for (int i = 0; i < _compliteSoldiers.Count; i++)
+        {
+            _compliteSoldiers[i].ChangingBattlePoint(warPoint);
+        }
     }
 }
