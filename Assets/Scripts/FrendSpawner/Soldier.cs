@@ -15,10 +15,16 @@ public class Soldier : Health
 
     public override event Action<Health> Die;
 
+    public event Action<Soldier> Dead;
 
     public void SetStartPoint(Transform point, Transform warPoint)
     {
         MovePoint = point;
+        WarPoint = warPoint;
+    }
+    
+    public void ChangingBattlePoint(Transform warPoint)
+    {
         WarPoint = warPoint;
     }
 
@@ -28,7 +34,7 @@ public class Soldier : Health
 
         if (_health <= 0)
         {
-            Die?.Invoke(this);
+            Dead?.Invoke(this);
 
             gameObject.SetActive(false);
         }
