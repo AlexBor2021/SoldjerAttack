@@ -25,15 +25,11 @@ public class BagMoney : MonoBehaviour
         if (other.TryGetComponent<Money>(out Money money))
         {
             if (money.IsCollect == false)
-            {
                 GiveMoney(money);
-            }
         }
     }
     public void StopTakeMoney()
     {
-        Debug.Log("остановка курутины");
-
         if (_takemoney != null)
             StopCoroutine(_takemoney);
     }
@@ -55,14 +51,9 @@ public class BagMoney : MonoBehaviour
 
                 buyAndUpgrade.CameMoney();
 
-                Debug.Log("идет куратина");
-
                 if (_moneys.Count == 0 || buyAndUpgrade.CheckIsUpgrade())
-                {
-                    Debug.Log("нет апгрейда");
                     StopTakeMoney();
-                }
-
+               
                 yield return new WaitForSeconds(0.3f);
             }
         }
