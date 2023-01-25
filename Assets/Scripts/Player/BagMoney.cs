@@ -32,7 +32,8 @@ public class BagMoney : MonoBehaviour
     }
     public void StopTakeMoney()
     {
-        StopCoroutine(_takemoney);
+        if (_takemoney != null)
+            StopCoroutine(_takemoney);
     }
     public void TakeMoney(Transform _placeMoveMoney, int price, BuyAndUpgrade buyAndUpgrade)
     {
@@ -41,28 +42,28 @@ public class BagMoney : MonoBehaviour
 
     private IEnumerator TakingMoney(Transform parent, int price, BuyAndUpgrade buyAndUpgrade)
     {
-            while (_moneys.Count != 0)
+        while (_moneys.Count != 0)
+        {
+            for (int i = 0; i < price; i++)
             {
-                for (int i = 0; i < price; i++)
+                _moneys[_moneys.Count-1].Moving(parent);
+                _moneys.RemoveAt(_moneys.Count - 1);
+                ChengedBAgMoney?.Invoke(_moneys.Count);
+                _heightY -= _heightDiference;
+
+                buyAndUpgrade.CameMoney();
+
+                Debug.Log("идет куратина");
+
+                if (_moneys.Count == 0 || buyAndUpgrade.CheckIsUpgrade())
                 {
-                    _moneys[_moneys.Count-1].Moving(parent);
-                    _moneys.RemoveAt(_moneys.Count - 1);
-                    ChengedBAgMoney?.Invoke(_moneys.Count);
-                    _heightY -= _heightDiference;
-
-                    buyAndUpgrade.CameMoney();
-
-                    Debug.Log("идет куратина");
-                    if (_moneys.Count == 0 || buyAndUpgrade.CheckIsUpgrade())
-                    {
-                        Debug.Log("нет апгрейда");
-                        StopCoroutine(_takemoney);
-                        break;
-                    }
-
-                    yield return new WaitForSeconds(0.3f);
+                    Debug.Log("нет апгрейда");
+                    StopCoroutine(_takemoney);
                 }
+
+                yield return new WaitForSeconds(0.3f);
             }
+        }
 
         yield return null;
     }
