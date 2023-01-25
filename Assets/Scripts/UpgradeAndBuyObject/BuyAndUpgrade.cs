@@ -62,7 +62,8 @@ public abstract class BuyAndUpgrade : MonoBehaviour
             if (_takeMoney == _priseUpgrade[0])
             {
                 Debug.Log(_bagMoney);
-                _bagMoney.StopTakeMoney();
+                if (_bagMoney != null)
+                    _bagMoney.StopTakeMoney();
                 _takeMoney = 0;
                 _priseUpgrade.RemoveAt(0);
                 TakeMoneyFromBag();
