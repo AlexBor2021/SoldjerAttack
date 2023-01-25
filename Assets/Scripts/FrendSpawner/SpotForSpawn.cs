@@ -47,4 +47,15 @@ public class SpotForSpawn : MonoBehaviour
         _compliteSoldiers.Clear();
         _indexPoint = 0;
     }
+
+    public void UpgradePlaceInBarak()
+    {
+        Debug.Log("увеличил уровень");
+        _currentLvl++;
+
+        if (_currentLvl < _pointForBots.Count)
+        {
+            InitPointForBots();
+        }
+    }
 }
