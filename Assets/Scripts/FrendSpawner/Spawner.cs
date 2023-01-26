@@ -27,7 +27,6 @@ public  class Spawner : MonoBehaviour
 
         if (countFreeSpace > 0)
         {
-            Debug.Log(transform.position);
             _spotForSpawn.SetSpawnedCharacter(Instantiate(_character, transform.position, Quaternion.identity));
         }
     }
