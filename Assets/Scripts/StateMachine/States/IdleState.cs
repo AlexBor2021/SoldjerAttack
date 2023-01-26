@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
+using UnityEngine.AI;
 
 
 public class IdleState : State
@@ -9,6 +9,7 @@ public class IdleState : State
     [SerializeField] private Soldier _movePoint;
     [SerializeField] private ChaseState _chaseState;
     [SerializeField] private Animator _animator;
+    [SerializeField] private NavMeshAgent _navMeshAgent;
 
     public bool _isInChaseState;
 
@@ -20,10 +21,12 @@ public class IdleState : State
         }
         else
         {
-            _movePoint.transform.position = Vector3.MoveTowards(_movePoint.transform.position, _movePoint.MovePoint.position, 0.05f);
+           _navMeshAgent.SetDestination(_movePoint.MovePoint.position);
            
             if (_movePoint.transform.position == _movePoint.MovePoint.position)
             {
+                _isInChaseState = true;
+                _navMeshAgent.isStopped = true;
                 _animator.SetBool("Run", false);
             }
             else

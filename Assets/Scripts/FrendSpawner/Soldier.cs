@@ -8,6 +8,8 @@ public class Soldier : Health
     [SerializeField] public int _damage;
     [SerializeField] private int _health;
     [SerializeField] private GameObject _token;
+    [SerializeField] private bool _isPlayer;
+    [SerializeField] private GameObject _panelDie;
 
     public Transform MovePoint { get; private set; }
     public Transform WarPoint { get; private set; }
@@ -35,9 +37,17 @@ public class Soldier : Health
 
         if (_health <= 0)
         {
-            Dead?.Invoke(this);
-            Instantiate(_token, transform.position, Quaternion.identity);
-            gameObject.SetActive(false);
+            if (_isPlayer)
+            {
+                _panelDie.SetActive(true);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Dead?.Invoke(this);
+                Instantiate(_token, transform.position, Quaternion.identity);
+                gameObject.SetActive(false);
+            }
         }
     }
 }
