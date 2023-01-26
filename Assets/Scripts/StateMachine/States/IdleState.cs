@@ -21,16 +21,14 @@ public class IdleState : State
         }
         else
         {
-           _navMeshAgent.SetDestination(_movePoint.MovePoint.position);
-           
-            if (_movePoint.transform.position == _movePoint.MovePoint.position)
+            if (_movePoint.transform.position.x == _movePoint.MovePoint.position.x && _movePoint.transform.position.z == _movePoint.MovePoint.position.z)
             {
-                _isInChaseState = true;
                 _navMeshAgent.isStopped = true;
                 _animator.SetBool("Run", false);
             }
             else
             {
+                _navMeshAgent.SetDestination(_movePoint.MovePoint.position);
                 _animator.SetBool("Run", true);
                 _movePoint.transform.LookAt(_movePoint.MovePoint.position, Vector3.up);
             }

@@ -54,7 +54,7 @@ public class ChaseEnemy : State
         _enemy.transform.position = Vector3.MoveTowards(_enemy.transform.position, _currentEnemy.transform.position, 0.05f);
         _animator.SetBool("Run", true);
 
-        if (Vector3.Distance(_enemy.transform.position, _currentEnemy.transform.position) < 6)
+        if (Vector3.Distance(_enemy.transform.position, _currentEnemy.transform.position) < 4)
             return true;
         else
             return false;
