@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Slider _slader;
-    [SerializeField] private Player _player;
+    [SerializeField] private Soldier _player;
 
     private Camera _camera;
 

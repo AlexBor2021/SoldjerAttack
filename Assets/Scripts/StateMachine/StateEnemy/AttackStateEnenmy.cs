@@ -17,6 +17,15 @@ public class AttackStateEnenmy : State
         _effectShoot.Stop();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent<Soldier>(out Soldier soldier) == _currentAim)
+        {
+            _currentAim = null;
+            _shootCorotine = null;
+        }
+    }
+
     public override State RunCurrentState()
     {
         if (_currentAim == null)

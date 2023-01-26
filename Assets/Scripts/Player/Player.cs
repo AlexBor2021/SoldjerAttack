@@ -8,5 +8,4 @@ public class Player : MonoBehaviour
 
     public int Health => _health;
 
-
 }

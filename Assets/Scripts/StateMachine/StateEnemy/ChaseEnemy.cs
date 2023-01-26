@@ -9,6 +9,7 @@ public class ChaseEnemy : State
     [SerializeField] private Animator _animator;
 
     private Soldier _currentEnemy;
+    private Player _player;
 
     public bool _isInAttackRange = false;
 
@@ -18,9 +19,18 @@ public class ChaseEnemy : State
         {
             if (ComeToEnemy())
             {
-                _animator.SetBool("Run", false);
-                _attackState.SetAimForAttack(_currentEnemy);
-                return _attackState;
+                if (_player != null)
+                {
+                    _animator.SetBool("Run", false);
+                    _attackState.SetAimForAttack(_currentEnemy);
+                    return _attackState;
+                }
+                else
+                {
+                    _animator.SetBool("Run", false);
+                    _attackState.SetAimForAttack(_currentEnemy);
+                    return _attackState;
+                }
             }
             else
                 return this;
@@ -44,7 +54,7 @@ public class ChaseEnemy : State
         _enemy.transform.position = Vector3.MoveTowards(_enemy.transform.position, _currentEnemy.transform.position, 0.05f);
         _animator.SetBool("Run", true);
 
-        if (Vector3.Distance(_enemy.transform.position, _currentEnemy.transform.position) < 3)
+        if (Vector3.Distance(_enemy.transform.position, _currentEnemy.transform.position) < 6)
             return true;
         else
             return false;
