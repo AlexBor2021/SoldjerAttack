@@ -36,6 +36,7 @@ public class ChaseState : State
     }
     private bool ComeToEnemy()
     {
+        Debug.Log(_currentEnemy.transform.position);
         _soldier.transform.LookAt(_currentEnemy.transform.position, Vector3.up);
         _navMeshAgent.SetDestination(_currentEnemy.transform.position);
 
@@ -50,6 +51,7 @@ public class ChaseState : State
 
     private void ReachThePosition()
     {
+        Debug.Log(_soldier.WarPoint.position);
         _soldier.transform.LookAt(_soldier.WarPoint.position, Vector3.up);
         _navMeshAgent.SetDestination(_soldier.WarPoint.position);
     }

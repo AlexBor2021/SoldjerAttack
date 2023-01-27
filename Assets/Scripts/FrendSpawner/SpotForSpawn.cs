@@ -36,9 +36,6 @@ public class SpotForSpawn : MonoBehaviour
 
         character.SetStartPoint(_activePointForBots[_indexPoint],_warPoints.CurrentPointOfAttack());
 
-        Debug.Log(_indexPoint);
-        Debug.Log(_activePointForBots[_indexPoint]);
-
         _indexPoint++;
     }
 
