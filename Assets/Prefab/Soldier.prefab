@@ -144,6 +144,7 @@ MonoBehaviour:
   _soldier: {fileID: 8697439319863891059}
   _animator: {fileID: 7759808543633920645}
   _effectShoot: {fileID: 1335082673569338540}
+  _navMeshAgent: {fileID: 8564151949598315144}
   _currentAim: {fileID: 0}
 --- !u!135 &7580323873487699091
 SphereCollider:

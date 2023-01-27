@@ -17,7 +17,6 @@ public class IdleState : State
     {
         if (_isInChaseState)
         {
-            Debug.Log("мочить хах");
             return _chaseState;
         }
         else

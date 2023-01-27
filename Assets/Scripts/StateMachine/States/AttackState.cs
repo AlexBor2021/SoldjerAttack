@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
+using UnityEngine.AI;
+
 
 public class AttackState : State
 {
@@ -9,6 +10,7 @@ public class AttackState : State
     [SerializeField] private Soldier _soldier;
     [SerializeField] private Animator _animator;
     [SerializeField] private ParticleSystem _effectShoot;
+    [SerializeField] private NavMeshAgent _navMeshAgent;
 
     private Coroutine _shootCorotine = null;
     
@@ -29,8 +31,10 @@ public class AttackState : State
             }
             _chaseState._isInAttackRange = false;
             _animator.SetBool("Run", true);
+            _navMeshAgent.isStopped = false;
             return _chaseState;
         }
+
         _animator.SetBool("Run", false);
         return this;
     }
@@ -53,6 +57,7 @@ public class AttackState : State
     {
         while (_currentAim.Health > 0)
         {
+            _navMeshAgent.isStopped = true;
             _soldier.transform.LookAt(_currentAim.transform.position);
             _currentAim.TakeDamage(_soldier.Damage);
             _effectShoot.Play();
