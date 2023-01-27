@@ -5,6 +5,7 @@ using UnityEngine;
 public class AllEnemySpawns : MonoBehaviour
 {
     [SerializeField] private List<EnemySpawn> _allEnemySpawns;
+    [SerializeField] private Transform _warpoint;
     [SerializeField] private GameObject _panelFinish;
     [SerializeField] private SpotForSpawn _spotSoldier;
 
@@ -27,7 +28,7 @@ public class AllEnemySpawns : MonoBehaviour
         }
         else
         {
-            return _allEnemySpawns[0].transform;
+            return _warpoint;
         }
     }
 
