@@ -23,7 +23,6 @@ public class IdleState : State
         {
             if (_movePoint.transform.position.x == _movePoint.MovePoint.position.x && _movePoint.transform.position.z == _movePoint.MovePoint.position.z)
             {
-                //_navMeshAgent.isStopped = true;
                 _animator.SetBool("Run", false);
             }
             else

@@ -19,7 +19,6 @@ public class ChaseState : State
         {
             if (ComeToEnemy())
             {
-                Debug.Log("поиск");
                 _attackState._currentAim = _currentEnemy;
                 _currentEnemy = null;
                 _animator.SetBool("Run", false);
