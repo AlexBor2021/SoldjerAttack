@@ -31,8 +31,8 @@ MonoBehaviour:
     m_Localized: Wave
     m_Metadata:
       m_Items: []
-  - m_Id: 14822585393152
-    m_Localized: Unlock
+  - m_Id: 31227368837251072
+    m_Localized: About
     m_Metadata:
       m_Items: []
   - m_Id: 16831241773056
@@ -101,6 +101,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 11578543332507648
     m_Localized: You are not logged in !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31234308275470336
+    m_Localized: Restart
     m_Metadata:
       m_Items: []
   references:
