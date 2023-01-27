@@ -28,6 +28,7 @@ public class SpotForSpawn : MonoBehaviour
     public int GetAmountFreeSpace()
     {
         return _activePointForBots.Count - _indexPoint;
+
     }
 
     public void SetSpawnedCharacter(Soldier character)
@@ -35,7 +36,6 @@ public class SpotForSpawn : MonoBehaviour
         _compliteSoldiers.Add(character);
 
         character.SetStartPoint(_activePointForBots[_indexPoint],_warPoints.CurrentPointOfAttack());
-
         _indexPoint++;
     }
 

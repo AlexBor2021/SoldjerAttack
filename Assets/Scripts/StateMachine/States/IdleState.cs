@@ -17,13 +17,14 @@ public class IdleState : State
     {
         if (_isInChaseState)
         {
+            Debug.Log("мочить хах");
             return _chaseState;
         }
         else
         {
             if (_movePoint.transform.position.x == _movePoint.MovePoint.position.x && _movePoint.transform.position.z == _movePoint.MovePoint.position.z)
             {
-                _navMeshAgent.isStopped = true;
+                //_navMeshAgent.isStopped = true;
                 _animator.SetBool("Run", false);
             }
             else
