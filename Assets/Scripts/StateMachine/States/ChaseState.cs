@@ -19,6 +19,7 @@ public class ChaseState : State
         {
             if (ComeToEnemy())
             {
+                Debug.Log("поиск");
                 _attackState._currentAim = _currentEnemy;
                 _currentEnemy = null;
                 _animator.SetBool("Run", false);
@@ -41,7 +42,6 @@ public class ChaseState : State
 
         if (Vector3.Distance(_soldier.transform.position, _currentEnemy.transform.position) < 5)
         {
-            _navMeshAgent.isStopped = true;
             return true;
         }
         else
@@ -52,6 +52,7 @@ public class ChaseState : State
     {
         _soldier.transform.LookAt(_soldier.WarPoint.position, Vector3.up);
         _navMeshAgent.SetDestination(_soldier.WarPoint.position);
+        Debug.Log("Надо идти");
     }
 
     private void OnTriggerStay(Collider other)
