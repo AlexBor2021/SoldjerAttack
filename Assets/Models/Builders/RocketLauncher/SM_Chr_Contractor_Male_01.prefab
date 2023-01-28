@@ -83,6 +83,7 @@ MonoBehaviour:
   _soldier: {fileID: 8955479892874494146}
   _animator: {fileID: 5412660745354127163}
   _effectShoot: {fileID: 0}
+  _navMeshAgent: {fileID: 3820600347781096850}
   _currentAim: {fileID: 0}
 --- !u!135 &8012816742393453549
 SphereCollider:
@@ -144,6 +145,7 @@ MonoBehaviour:
   _movePoint: {fileID: 8955479892874494146}
   _chaseState: {fileID: 7181782082298159149}
   _animator: {fileID: 5412660745354127163}
+  _navMeshAgent: {fileID: 3820600347781096850}
   _isInChaseState: 0
 --- !u!1 &5352532707090843209
 GameObject:
@@ -6119,6 +6121,7 @@ GameObject:
   - component: {fileID: 2290440851422229242}
   - component: {fileID: 5119582217700742172}
   - component: {fileID: 2979047092890456894}
+  - component: {fileID: 3820600347781096850}
   m_Layer: 0
   m_Name: SM_Chr_Contractor_Male_01
   m_TagString: Untagged
@@ -6154,7 +6157,7 @@ Animator:
   m_GameObject: {fileID: 5353365857238308137}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b3a849229c6faea448cb1f0200840e8d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 36b4444f905f18a45b26ac0ea0477494, type: 2}
+  m_Controller: {fileID: 9100000, guid: 93688ff48c8cd1d4ba30400cf3d71f70, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -6176,9 +6179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4363654a04e8f0d4faae6b9877d8d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 0
-  _health: 0
-  _token: {fileID: 0}
+  _damage: 20
+  _health: 50
+  _token: {fileID: 3986475020106054337, guid: 9e91011a5f75b9f4f8766497a2588e3e, type: 3}
+  _isPlayer: 0
+  _panelDie: {fileID: 0}
 --- !u!136 &6958887402890026541
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6221,7 +6226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002db92a5bb0f05438189f4db2803dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentState: {fileID: 0}
+  _currentState: {fileID: 6043109092007506330}
 --- !u!114 &2979047092890456894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6238,6 +6243,28 @@ MonoBehaviour:
   _targetRighthand: {fileID: 0}
   _rotateLeft: {fileID: 0}
   _rotateRight: {fileID: 0}
+--- !u!195 &3820600347781096850
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353365857238308137}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5353368047156068955
 GameObject:
   m_ObjectHideFlags: 0
@@ -7726,6 +7753,7 @@ MonoBehaviour:
   _soldier: {fileID: 8955479892874494146}
   _animator: {fileID: 5412660745354127163}
   _durationForPosition: 5
+  _navMeshAgent: {fileID: 3820600347781096850}
   _isInAttackRange: 0
 --- !u!135 &1811523545761238486
 SphereCollider:

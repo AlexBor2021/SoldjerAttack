@@ -47,6 +47,7 @@ MonoBehaviour:
   _movePoint: {fileID: 6955172495614803477}
   _chaseState: {fileID: 8570154645997003614}
   _animator: {fileID: 7912861162866758008}
+  _navMeshAgent: {fileID: 2372744256283240}
   _isInChaseState: 0
 --- !u!1 &4714964325470665266
 GameObject:
@@ -97,6 +98,7 @@ MonoBehaviour:
   _soldier: {fileID: 6955172495614803477}
   _animator: {fileID: 7912861162866758008}
   _effectShoot: {fileID: 0}
+  _navMeshAgent: {fileID: 2372744256283240}
   _currentAim: {fileID: 0}
 --- !u!135 &1163973512770072526
 SphereCollider:
@@ -5480,6 +5482,7 @@ GameObject:
   - component: {fileID: 3484263325761494226}
   - component: {fileID: 4953719847556559023}
   - component: {fileID: 8245835546540629230}
+  - component: {fileID: 2372744256283240}
   m_Layer: 0
   m_Name: Sniper
   m_TagString: Untagged
@@ -5516,7 +5519,7 @@ Animator:
   m_GameObject: {fileID: 7820319753144827218}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b3a849229c6faea448cb1f0200840e8d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 36b4444f905f18a45b26ac0ea0477494, type: 2}
+  m_Controller: {fileID: 9100000, guid: 93688ff48c8cd1d4ba30400cf3d71f70, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -5538,9 +5541,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4363654a04e8f0d4faae6b9877d8d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 0
-  _health: 0
-  _token: {fileID: 0}
+  _damage: 30
+  _health: 30
+  _token: {fileID: 3986475020106054337, guid: 9e91011a5f75b9f4f8766497a2588e3e, type: 3}
+  _isPlayer: 0
+  _panelDie: {fileID: 0}
 --- !u!136 &801816537547321813
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5600,6 +5605,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentState: {fileID: 6581635869471338018}
+--- !u!195 &2372744256283240
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820319753144827218}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7820324759814072258
 GameObject:
   m_ObjectHideFlags: 0
@@ -6867,6 +6894,7 @@ MonoBehaviour:
   _soldier: {fileID: 6955172495614803477}
   _animator: {fileID: 7912861162866758008}
   _durationForPosition: 5
+  _navMeshAgent: {fileID: 2372744256283240}
   _isInAttackRange: 0
 --- !u!135 &7059624485023699517
 SphereCollider:
