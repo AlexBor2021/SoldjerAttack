@@ -51,7 +51,6 @@ public class ChaseState : State
     {
         _soldier.transform.LookAt(_soldier.WarPoint.position, Vector3.up);
         _navMeshAgent.SetDestination(_soldier.WarPoint.position);
-        Debug.Log("Надо идти");
     }
 
     private void OnTriggerStay(Collider other)

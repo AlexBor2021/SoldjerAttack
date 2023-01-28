@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayButoon()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void InfoButton()
     {

@@ -5,6 +5,7 @@ using System;
 public class EnemySpawn : MonoBehaviour
 {
     [SerializeField] private List<Health> _enemyOnSpot;
+    [SerializeField] private FinishMenu _finishMenu;
 
     public event Action<EnemySpawn> OnSpawnDie;
 
@@ -19,6 +20,8 @@ public class EnemySpawn : MonoBehaviour
     private void EnemyDie(Health enemy)
     {
         enemy.Die -= EnemyDie;
+
+        _finishMenu.SetEnemyKills();
 
         _enemyOnSpot.Remove(enemy);
 
