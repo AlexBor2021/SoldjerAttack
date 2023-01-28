@@ -3323,7 +3323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 8955479892874494146, guid: 468d746d74d5733438500539f4df6640, type: 3}
-  _delay: 0
+  _delay: 3
   _spotForSpawn: {fileID: 8193741830849946037}
 --- !u!1 &6510351436483840788
 GameObject:
