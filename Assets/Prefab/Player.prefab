@@ -7297,8 +7297,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6050705611671183390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.661501, y: -0.863264, z: -1.4871426}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.661501, y: -0.863264, z: -2.18}
+  m_LocalScale: {x: 0.89393, y: 0.89393, z: 0.89393}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8996453663416300811}
@@ -8424,6 +8424,7 @@ MonoBehaviour:
   _damage: 100
   _effectShoot: {fileID: 9198355585405981906}
   _playeRb: {fileID: 6657707733230395197}
+  _rotionPlayer: {fileID: 859923231380571774}
 --- !u!135 &1462681861
 SphereCollider:
   m_ObjectHideFlags: 0

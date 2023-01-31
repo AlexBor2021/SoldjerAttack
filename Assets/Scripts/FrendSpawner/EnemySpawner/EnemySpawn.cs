@@ -16,7 +16,7 @@ public class EnemySpawn : MonoBehaviour
             enemy.Die += EnemyDie;
         }
     }
-
+   
     private void EnemyDie(Health enemy)
     {
         enemy.Die -= EnemyDie;

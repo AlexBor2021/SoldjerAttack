@@ -7,9 +7,11 @@ public class ShootTank : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private ParticleSystem _effectShoot;
     [SerializeField] private Rigidbody _playeRb;
+    [SerializeField] private Player _rotionPlayer;
 
     private Enemy _enemy;
     private Coroutine _damageTakeCor;
+    private float _speedRotation = 12f;
 
     private void OnEnable()
     {
@@ -21,6 +23,17 @@ public class ShootTank : MonoBehaviour
         if (_playeRb.velocity.magnitude > 2)
         {
             _effectShoot.Stop();
+        }
+
+        if (_enemy != null)
+        {
+            var diraction = (_enemy.transform.position - transform.position).normalized;
+            Quaternion lookRotathion = Quaternion.LookRotation(new Vector3(diraction.x, 0, diraction.z));
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookRotathion, Time.deltaTime * _speedRotation);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, _rotionPlayer.transform.rotation, Time.deltaTime * _speedRotation);
         }
     }
     private void OnTriggerStay(Collider other)
@@ -49,7 +62,6 @@ public class ShootTank : MonoBehaviour
         {
             if (_playeRb.velocity.magnitude < 2)
             {
-                
                 _enemy.TakeDamage(_damage);
                 _effectShoot.Play();
             }
