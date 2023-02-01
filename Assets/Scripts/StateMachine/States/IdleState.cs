@@ -29,7 +29,7 @@ public class IdleState : State
             {
                 _navMeshAgent.SetDestination(_movePoint.MovePoint.position);
                 _animator.SetBool("Run", true);
-                _movePoint.transform.LookAt(_movePoint.MovePoint.position, Vector3.up);
+                _movePoint.transform.rotation = Quaternion.identity;
             }
 
             return this;
