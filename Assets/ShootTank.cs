@@ -7,7 +7,7 @@ public class ShootTank : MonoBehaviour
     [SerializeField] private int _damage;
     [SerializeField] private ParticleSystem _effectShoot;
     [SerializeField] private Rigidbody _playeRb;
-    [SerializeField] private Player _rotionPlayer;
+    [SerializeField] private Transform _rotionMain;
 
     private Enemy _enemy;
     private Coroutine _damageTakeCor;
@@ -33,7 +33,7 @@ public class ShootTank : MonoBehaviour
         }
         else
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, _rotionPlayer.transform.rotation, Time.deltaTime * _speedRotation);
+            transform.rotation = Quaternion.Lerp(transform.rotation, _rotionMain.rotation, Time.deltaTime * _speedRotation);
         }
     }
     private void OnTriggerStay(Collider other)
