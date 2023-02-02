@@ -9,7 +9,7 @@ public class WaveAttackZone : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Player>())
         {
-        _buttonAttak.SetActive(true);
+            _buttonAttak.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
