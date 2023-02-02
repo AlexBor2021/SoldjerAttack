@@ -15,6 +15,7 @@ public class SpotForSpawn : MonoBehaviour
     private void Awake()
     {
         InitPointForBots();
+        _warPoints = FindObjectOfType<AllEnemySpawns>();
     }
 
     private void InitPointForBots()
