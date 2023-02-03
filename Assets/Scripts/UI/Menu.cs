@@ -7,6 +7,11 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private MoverPlayer _moverPlayer;
 
+    private void OnEnable()
+    {
+        _moverPlayer.enabled = false;
+    }
+
     public void StartGame()
     {
         _moverPlayer.enabled = true;

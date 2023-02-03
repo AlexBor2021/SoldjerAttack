@@ -7288,7 +7288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3786897587306504910
 Transform:
   m_ObjectHideFlags: 0
@@ -7320,7 +7320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8674208931732802968
 Transform:
   m_ObjectHideFlags: 0
@@ -7727,7 +7727,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.000015258789, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8424,7 +8424,7 @@ MonoBehaviour:
   _damage: 100
   _effectShoot: {fileID: 9198355585405981906}
   _playeRb: {fileID: 6657707733230395197}
-  _rotionPlayer: {fileID: 859923231380571774}
+  _rotionMain: {fileID: 0}
 --- !u!135 &1462681861
 SphereCollider:
   m_ObjectHideFlags: 0

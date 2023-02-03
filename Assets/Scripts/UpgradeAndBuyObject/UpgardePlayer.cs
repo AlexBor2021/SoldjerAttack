@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgardePlayer : BuyAndUpgrade
 {
     [SerializeField] private SkinPlayerUpgrade _skinPlayerUograde;
-    [SerializeField] private SpotForSpawn _spotForSpawn;
+    [SerializeField] private List<SpotForSpawn> _spotForSpawns;
     protected override void OffObject()
     {
         gameObject.SetActive(false);
@@ -14,6 +14,9 @@ public class UpgardePlayer : BuyAndUpgrade
     protected override void UpgradeObject()
     {
         _skinPlayerUograde.Upgrade(_currentLevelUpgrade);
-        _spotForSpawn.UpgradePlaceInBarak();
+        foreach (var item in _spotForSpawns)
+        {
+            item.UpgradePlaceInBarak();
+        }
     }
 }
