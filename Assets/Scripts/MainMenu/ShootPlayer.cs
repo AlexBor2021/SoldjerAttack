@@ -6,6 +6,7 @@ public class ShootPlayer : MonoBehaviour
 {
     [SerializeField] private List<ParticleSystem> _particles;
     [SerializeField] private ParticleSystem _shootEffect;
+    [SerializeField] private AudioSource _shootSound;
 
     private Coroutine _shoot;
 
@@ -26,10 +27,11 @@ public class ShootPlayer : MonoBehaviour
         while (true)
         {
             _shootEffect.Play();
+            _shootSound.Play();
 
             _particles[Random.Range(0, _particles.Count-1)].Play();
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(4f);
         }
 
         yield return null;

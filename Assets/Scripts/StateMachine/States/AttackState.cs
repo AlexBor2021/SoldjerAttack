@@ -6,11 +6,13 @@ using UnityEngine.AI;
 
 public class AttackState : State
 {
+    [SerializeField] private float _dalayShoot;
     [SerializeField] private ChaseState _chaseState;
     [SerializeField] private Soldier _soldier;
     [SerializeField] private Animator _animator;
     [SerializeField] private ParticleSystem _effectShoot;
     [SerializeField] private NavMeshAgent _navMeshAgent;
+    [SerializeField] private AudioSource _shoot;
 
     private Coroutine _shootCorotine = null;
     
@@ -62,8 +64,9 @@ public class AttackState : State
             _soldier.transform.LookAt(_currentAim.transform.position);
             _currentAim.TakeDamage(_soldier.Damage);
             _effectShoot.Play();
+            _shoot.Play();
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(_dalayShoot);
         }
         _currentAim = null;
         _shootCorotine = null;

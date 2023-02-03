@@ -8,6 +8,7 @@ public class ShootTank : MonoBehaviour
     [SerializeField] private ParticleSystem _effectShoot;
     [SerializeField] private Rigidbody _playeRb;
     [SerializeField] private Transform _rotionMain;
+    [SerializeField] private AudioSource _shoot;
 
     private Enemy _enemy;
     private Coroutine _damageTakeCor;
@@ -64,9 +65,10 @@ public class ShootTank : MonoBehaviour
             {
                 _enemy.TakeDamage(_damage);
                 _effectShoot.Play();
+                _shoot.Play();
             }
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(4f);
         }
 
         _enemy = null;

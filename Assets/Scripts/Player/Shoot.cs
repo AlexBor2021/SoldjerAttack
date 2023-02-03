@@ -8,6 +8,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private ParticleSystem _effectShoot;
     [SerializeField] private Player _player;
     [SerializeField] private Rigidbody _playeRb;
+    [SerializeField] private AudioSource _shoot;
 
     private Enemy _enemy;
     private Coroutine _damageTakeCor;
@@ -53,6 +54,7 @@ public class Shoot : MonoBehaviour
                 _player.transform.LookAt(_enemy.transform.position);
                 _enemy.TakeDamage(_damage);
                 _effectShoot.Play();
+                _shoot.Play();
             }
 
             yield return new WaitForSeconds(1f);

@@ -8,6 +8,8 @@ public class AttackStateEnenmy : State
     [SerializeField] private Enemy _enemy;
     [SerializeField] private Animator _animator;
     [SerializeField] private ParticleSystem _effectShoot;
+    [SerializeField] private AudioSource _shoot;
+    [SerializeField] private float _dalayShoot;
 
     private Coroutine _shootCorotine = null;
     private Soldier _currentAim;
@@ -57,8 +59,9 @@ public class AttackStateEnenmy : State
             _enemy.transform.LookAt(_currentAim.transform.position);
             _currentAim.TakeDamage(_enemy.Damage);
             _effectShoot.Play();
+            _shoot.Play();
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(_dalayShoot);
         }
 
         _chaseState.OffAim();

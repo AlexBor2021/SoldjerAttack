@@ -37,7 +37,10 @@ public class AllEnemySpawns : MonoBehaviour
 
         if (_allEnemySpawns.Count != 0)
         {
-            _spotSoldier[0].ChangingWarPointForBots(_allEnemySpawns[0].transform);
+            foreach (var item in _spotSoldier)
+            {
+                item.ChangingWarPointForBots(_allEnemySpawns[0].transform);
+            }
         }
         else
         {

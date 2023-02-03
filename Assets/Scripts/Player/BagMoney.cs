@@ -9,6 +9,7 @@ public class BagMoney : MonoBehaviour
     [SerializeField] private Transform _contaner;
     [SerializeField] private List<Money> _moneys;
     [SerializeField] private float _heightDiference = 0.15f;
+    [SerializeField] private AudioSource _moneySound;
 
     private float _heightY = 0;
     private Coroutine _takemoney;
@@ -66,6 +67,8 @@ public class BagMoney : MonoBehaviour
     }
     private void GiveMoney(Money money)
     {
+        _moneySound.Play();
+
         money.transform.SetParent(_contaner);
 
         if (_moneys.Count == 0)
