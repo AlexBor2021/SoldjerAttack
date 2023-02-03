@@ -12,8 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 51f17bac347fb3946966e5de79e838f4
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: f1a4d0d0b2a009e44be409009ce45402
+    path: Assets/Scenes/Maps/LVls 1 - 5/Lvl1 1.unity
+    guid: fc1020d2e22143241a346ba04ea08776
+  - enabled: 1
+    path: Assets/Scenes/Maps/LVls 1 - 5/Lvl2.unity
+    guid: 8103c67b41fc6ab468c37c9229d054da
+  - enabled: 1
+    path: Assets/Scenes/Maps/LVls 1 - 5/Lvl3.unity
+    guid: c4a8b65274e0e764a8afd6881d884437
+  - enabled: 1
+    path: Assets/Scenes/Maps/LVls 1 - 5/Lvl4.unity
+    guid: 00505763da2de224daf4b11115c63af0
+  - enabled: 1
+    path: Assets/Scenes/Maps/LVls 1 - 5/Lvl5.unity
+    guid: b94d5de311d34bd42ae0ee6f4f971057
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: bde31d9a76a687d4c981f507c0231632, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: b607cec48af384141a94c6c2cdfde0db, type: 2}

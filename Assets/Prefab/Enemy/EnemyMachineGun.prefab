@@ -237,6 +237,7 @@ Transform:
   - {fileID: 2340526261998818167}
   - {fileID: 4081695061623588416}
   - {fileID: 6138976366919279322}
+  - {fileID: 8856289508004360669}
   m_Father: {fileID: 7499346961738818180}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -990,7 +991,7 @@ MonoBehaviour:
   _chaseState: {fileID: 8155830497840088506}
   _enemy: {fileID: 5335857456815233809}
   _animator: {fileID: 7588252953104787556}
-  _effectShoot: {fileID: 0}
+  _effectShoot: {fileID: 8856289508022745581}
 --- !u!1 &5569505307305856800
 GameObject:
   m_ObjectHideFlags: 0
@@ -7368,3 +7369,70 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00165084, y: 1.4266381, z: -0.034346387}
     m_Extent: {x: 0.27522853, y: 0.1353237, z: 0.16276735}
   m_DirtyAABB: 0
+--- !u!1001 &8636574237004391869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3455132913902287179}
+    m_Modifications:
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953807508369425656, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+      propertyPath: m_Name
+      value: Soldier effect and machine gun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+--- !u!4 &8856289508004360669 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 953807508369151072, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+  m_PrefabInstance: {fileID: 8636574237004391869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8856289508022745581 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 953807508384324688, guid: df67a603370a59e4cbfaf491cc7f5309, type: 3}
+  m_PrefabInstance: {fileID: 8636574237004391869}
+  m_PrefabAsset: {fileID: 0}

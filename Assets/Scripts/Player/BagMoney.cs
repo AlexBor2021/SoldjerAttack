@@ -44,7 +44,11 @@ public class BagMoney : MonoBehaviour
         {
             for (int i = 0; i < price; i++)
             {
-                _moneys[_moneys.Count-1].Moving(parent);
+                if (_moneys.Count != 0)
+                {
+                    _moneys[_moneys.Count - 1].Moving(parent);
+                }
+                
                 _moneys.RemoveAt(_moneys.Count - 1);
                 ChengedBAgMoney?.Invoke(_moneys.Count);
                 _heightY -= _heightDiference;

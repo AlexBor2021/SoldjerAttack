@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-//using Agava.YandexGames;
+using Agava.YandexGames;
 
 public class MoverPlayer : MonoBehaviour
 {
