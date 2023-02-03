@@ -23,6 +23,8 @@ public class AttackState : State
 
     public override State RunCurrentState()
     {
+        _navMeshAgent.isStopped = true;
+
         if (_currentAim == null)
         {
             if (_shootCorotine!= null)
@@ -57,7 +59,6 @@ public class AttackState : State
     {
         while (_currentAim.Health > 0)
         {
-            _navMeshAgent.isStopped = true;
             _soldier.transform.LookAt(_currentAim.transform.position);
             _currentAim.TakeDamage(_soldier.Damage);
             _effectShoot.Play();
