@@ -15,6 +15,7 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         _moverPlayer.enabled = true;
+        Time.timeScale = 1;
     }
 
     public void Restart()
