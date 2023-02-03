@@ -11,6 +11,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     [SerializeField] protected GameObject _objectBuy;
     [SerializeField] protected List<int> _priseUpgrade;
     [SerializeField] protected Transform _placeMoveMoney;
+    [SerializeField] protected AudioSource _upSound;
 
     protected int _takeMoney;
     protected BagMoney _bagMoney;
@@ -55,6 +56,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
             _prise = 0;
             _takeMoney = 0;
             TakeMoneyFromBag();
+            _upSound.Play();
         }
         else if(_priseUpgrade.Count > 0 && _objectBuy.activeSelf)
         {
@@ -67,6 +69,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
                 TakeMoneyFromBag();
                 _currentLevelUpgrade++;
                 UpgradeObject();
+                _upSound.Play();
             }
         }
     }
