@@ -15,6 +15,8 @@ public class ChaseState : State
 
     public override State RunCurrentState()
     {
+        _navMeshAgent.isStopped = false;
+
         if (_isInAttackRange)
         {
             if (ComeToEnemy())
@@ -39,7 +41,7 @@ public class ChaseState : State
         _soldier.transform.LookAt(_currentEnemy.transform.position, Vector3.up);
         _navMeshAgent.SetDestination(_currentEnemy.transform.position);
 
-        if (Vector3.Distance(_soldier.transform.position, _currentEnemy.transform.position) < 5)
+        if (Vector3.Distance(_soldier.transform.position, _currentEnemy.transform.position) < 6)
         {
             return true;
         }
