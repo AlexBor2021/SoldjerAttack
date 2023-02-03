@@ -6,7 +6,7 @@ public class AllEnemySpawns : MonoBehaviour
 {
     [SerializeField] private List<EnemySpawn> _allEnemySpawns;
     [SerializeField] private GameObject _panelFinish;
-    [SerializeField] private SpotForSpawn _spotSoldier;
+    [SerializeField] private List<SpotForSpawn> _spotSoldier;
 
 
     private void OnEnable()
@@ -37,7 +37,11 @@ public class AllEnemySpawns : MonoBehaviour
 
         if (_allEnemySpawns.Count != 0)
         {
-            _spotSoldier.ChangingWarPointForBots(_allEnemySpawns[0].transform);
+            _spotSoldier[0].ChangingWarPointForBots(_allEnemySpawns[0].transform);
+        }
+        else
+        {
+            CurrentPointOfAttack();
         }
     }
 }
