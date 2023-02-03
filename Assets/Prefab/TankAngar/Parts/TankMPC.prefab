@@ -2281,10 +2281,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a8ec17fe38c8b4283e1a08c79a304c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movePoint: {fileID: 0}
+  _movePoint: {fileID: 5636604984501393794}
   _chaseState: {fileID: 6471415694447321579}
-  _animator: {fileID: 0}
-  _navMeshAgent: {fileID: 0}
+  _animator: {fileID: 1277749625184247780}
+  _navMeshAgent: {fileID: 710855088013382815}
   _isInChaseState: 0
 --- !u!1 &4943141833659781271
 GameObject:
@@ -2366,10 +2366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chaseState: {fileID: 6471415694447321579}
-  _soldier: {fileID: 0}
-  _animator: {fileID: 0}
-  _effectShoot: {fileID: 0}
-  _navMeshAgent: {fileID: 0}
+  _soldier: {fileID: 5636604984501393794}
+  _animator: {fileID: 1277749625184247780}
+  _effectShoot: {fileID: 6693173230169414990}
+  _navMeshAgent: {fileID: 710855088013382815}
   _currentAim: {fileID: 0}
 --- !u!135 &3853258874950996551
 SphereCollider:
@@ -2481,10 +2481,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackState: {fileID: 550575374622346934}
-  _soldier: {fileID: 0}
-  _animator: {fileID: 0}
+  _soldier: {fileID: 5636604984501393794}
+  _animator: {fileID: 1277749625184247780}
   _durationForPosition: 5
-  _navMeshAgent: {fileID: 0}
+  _navMeshAgent: {fileID: 710855088013382815}
   _isInAttackRange: 0
 --- !u!135 &1794516034652179905
 SphereCollider:
