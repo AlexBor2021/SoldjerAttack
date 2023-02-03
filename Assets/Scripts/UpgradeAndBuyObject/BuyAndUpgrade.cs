@@ -29,19 +29,19 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<BagMoney>(out _bagMoney))
+        if (other.TryGetComponent<BagMoney>(out BagMoney bagMoney))
         {
+            _bagMoney = bagMoney;
             TakeMoneyFromBag();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<BagMoney>(out _bagMoney))
+        if (other.TryGetComponent<BagMoney>(out BagMoney bagMoney))
         {
             _bagMoney.StopTakeMoney();
         }
     }
-
     public void CameMoney()
     {
         _takeMoney++;

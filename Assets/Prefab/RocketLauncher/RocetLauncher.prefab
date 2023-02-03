@@ -730,10 +730,12 @@ MonoBehaviour:
   _priseText: {fileID: 6622621528052366237}
   _moneyTaking: {fileID: 6622621529390239394}
   _objectBuy: {fileID: 9116251112847701556}
-  _priseUpgrade: 0a0000000f000000
+  _priseUpgrade: 0f00000014000000
   _placeMoveMoney: {fileID: 6622621528724692186}
   _upgrades:
-  - {fileID: 0}
+  - {fileID: 7549197603123705839}
+  - {fileID: 7002862608875239218}
+  - {fileID: 56796579277790368}
   _spawner: {fileID: 6438781077256847565}
 --- !u!1 &6622621528933845142
 GameObject:
@@ -1751,8 +1753,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7002862608875239218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.92}
+  m_LocalScale: {x: 1, y: 1, z: 0.82044}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7000845363180816018}
@@ -2287,6 +2289,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4292189472278764, guid: e927b4c822e05b1458cfdf087756b34a, type: 3}
   m_PrefabInstance: {fileID: 58328176995280042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &56796579277790368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1953947631515658, guid: e927b4c822e05b1458cfdf087756b34a, type: 3}
+  m_PrefabInstance: {fileID: 58328176995280042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3216771636723942730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2423,6 +2430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c74e904fddcdaf4b9cf14ab9bb35daa, type: 3}
+--- !u!1 &7549197603123705839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1455897042392644, guid: 0c74e904fddcdaf4b9cf14ab9bb35daa, type: 3}
+  m_PrefabInstance: {fileID: 7548331048139071915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7552234909134503227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4471415695056016, guid: 0c74e904fddcdaf4b9cf14ab9bb35daa, type: 3}
