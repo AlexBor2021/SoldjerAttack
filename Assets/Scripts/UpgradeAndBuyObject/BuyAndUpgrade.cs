@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public abstract class BuyAndUpgrade : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     [SerializeField] protected List<int> _priseUpgrade;
     [SerializeField] protected Transform _placeMoveMoney;
     [SerializeField] protected AudioSource _upSound;
+    [SerializeField] protected Image _imageFiild;
 
     protected int _takeMoney;
     protected BagMoney _bagMoney;
@@ -46,6 +48,8 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     public void CameMoney()
     {
         _takeMoney++;
+
+        FildImage(_takeMoney);
 
         _moneyTaking.text = _takeMoney.ToString();
 
@@ -98,6 +102,20 @@ public abstract class BuyAndUpgrade : MonoBehaviour
             _bagMoney.TakeMoney(_placeMoveMoney, _priseUpgrade[0], this);
             _priseText.text = _priseUpgrade[0].ToString();
         }
+    }
+
+    private void FildImage(float value)
+    {
+        float number;
+        if (_prise != 0)
+        {
+            number = Mathf.InverseLerp(0, _prise, value);
+        }
+        else
+        {
+            number = Mathf.InverseLerp(0, _priseUpgrade[0], value);
+        }
+        _imageFiild.fillAmount = number;
     }
 
     protected abstract void UpgradeObject();
