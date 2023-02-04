@@ -24,7 +24,6 @@ public class AttackStateEnenmy : State
         if (other.TryGetComponent<Soldier>(out Soldier soldier) == _currentAim)
         {
             _currentAim = null;
-            _shootCorotine = null;
         }
     }
 

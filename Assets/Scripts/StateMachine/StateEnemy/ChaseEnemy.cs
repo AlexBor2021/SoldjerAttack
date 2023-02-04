@@ -9,7 +9,6 @@ public class ChaseEnemy : State
     [SerializeField] private Animator _animator;
 
     private Soldier _currentEnemy;
-    private Player _player;
 
     public bool _isInAttackRange = false;
 
@@ -19,18 +18,14 @@ public class ChaseEnemy : State
         {
             if (ComeToEnemy())
             {
-                if (_player != null)
+                if (_currentEnemy != null)
                 {
                     _animator.SetBool("Run", false);
                     _attackState.SetAimForAttack(_currentEnemy);
                     return _attackState;
                 }
                 else
-                {
-                    _animator.SetBool("Run", false);
-                    _attackState.SetAimForAttack(_currentEnemy);
-                    return _attackState;
-                }
+                    return this;
             }
             else
                 return this;
@@ -66,6 +61,14 @@ public class ChaseEnemy : State
         {
             _currentEnemy = soldier;
             _isInAttackRange = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out Soldier soldier))
+        {
+            _currentEnemy = null;
+            _isInAttackRange = false;
         }
     }
 }
