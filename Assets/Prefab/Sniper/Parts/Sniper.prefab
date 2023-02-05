@@ -6414,6 +6414,7 @@ MonoBehaviour:
   _token: {fileID: 3986475020106054337, guid: 9e91011a5f75b9f4f8766497a2588e3e, type: 3}
   _isPlayer: 0
   _panelDie: {fileID: 0}
+  _dieEffect: {fileID: 19856718, guid: 2e30d40b54f77704d815fabce00d7b2e, type: 3}
 --- !u!136 &801816537547321813
 CapsuleCollider:
   m_ObjectHideFlags: 0

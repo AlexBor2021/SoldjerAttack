@@ -107,6 +107,10 @@ MonoBehaviour:
     m_Key: Kill Enemy
     m_Metadata:
       m_Items: []
+  - m_Id: 34442878018158592
+    m_Key: Upgrade
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

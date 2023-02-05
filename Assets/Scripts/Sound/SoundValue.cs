@@ -19,7 +19,10 @@ public class SoundValue : MonoBehaviour
     
     public void SetMusicSound()
     {
-        _music.audioMixer.SetFloat(_musicVolume, Mathf.Lerp(-50, 0, _musicSlider.value));
+        Debug.Log(_musicVolume);
+
+        _music.audioMixer.SetFloat(_musicVolume, Mathf.Lerp(-60, 0, _musicSlider.value));
+
         if (_musicSlider.value > 0)
         {
             _musicOn.enabled = true;
@@ -33,7 +36,8 @@ public class SoundValue : MonoBehaviour
     }
     public void SetEffectSound()
     {
-        _effects.audioMixer.SetFloat(_effectsVolume, Mathf.Lerp(-50, 0, _effectsSlider.value));
+        _effects.audioMixer.SetFloat(_effectsVolume, Mathf.Lerp(-60, 0, _effectsSlider.value));
+
         if (_effectsSlider.value > 0)
         {
             _effectsOn.enabled = true;

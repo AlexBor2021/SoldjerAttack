@@ -10,6 +10,7 @@ public class Soldier : Health
     [SerializeField] private GameObject _token;
     [SerializeField] private bool _isPlayer;
     [SerializeField] private GameObject _panelDie;
+    [SerializeField] private ParticleSystem _dieEffect;
 
     public Transform MovePoint { get; private set; }
     public Transform WarPoint { get; private set; }
@@ -37,6 +38,8 @@ public class Soldier : Health
 
         if (_health <= 0)
         {
+            Instantiate(_dieEffect, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+
             if (_isPlayer)
             {
                 _panelDie.SetActive(true);

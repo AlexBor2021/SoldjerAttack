@@ -5644,6 +5644,7 @@ MonoBehaviour:
   _health: 100
   _damage: 10
   _token: {fileID: 3986475020106054337, guid: 9e91011a5f75b9f4f8766497a2588e3e, type: 3}
+  _dieEffect: {fileID: 19872744, guid: cca79b260878071418290367024a6716, type: 3}
 --- !u!195 &8118251737037549841
 NavMeshAgent:
   m_ObjectHideFlags: 0

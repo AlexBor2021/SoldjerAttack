@@ -111,6 +111,10 @@ MonoBehaviour:
     m_Localized: Kill Enemy
     m_Metadata:
       m_Items: []
+  - m_Id: 34442878018158592
+    m_Localized: Upgrade
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
