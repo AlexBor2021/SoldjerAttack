@@ -9,6 +9,7 @@ public class Box : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private Money _prefabMoney;
     [SerializeField] private AudioSource _openSourse;
+    [SerializeField] private ParticleSystem _destroyBox;
 
     private Coroutine _creareMoney;
 
@@ -39,6 +40,7 @@ public class Box : MonoBehaviour
     private void OffObject()
     {
         StopCoroutine(_creareMoney);
+        Instantiate(_destroyBox, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }
 }
