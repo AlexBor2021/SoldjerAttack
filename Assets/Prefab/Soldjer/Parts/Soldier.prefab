@@ -32169,7 +32169,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7705671774064402943}
   - component: {fileID: 7759808543633920645}
-  - component: {fileID: 7301420883002012170}
   - component: {fileID: 7670726651760374503}
   - component: {fileID: 8697439319863891059}
   - component: {fileID: 2702405731235253251}
@@ -32225,22 +32224,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &7301420883002012170
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7703398303424182021}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!136 &7670726651760374503
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -32319,7 +32302,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0

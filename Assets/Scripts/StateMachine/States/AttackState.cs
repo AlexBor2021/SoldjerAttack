@@ -26,24 +26,33 @@ public class AttackState : State
     public override State RunCurrentState()
     {
         _navMeshAgent.isStopped = true;
+        _animator.SetBool("Run", false);
 
         if (_currentAim == null)
         {
             if (_shootCorotine!= null)
             {
                 StopCoroutine(_shootCorotine);
+                _shootCorotine = null;
             }
             _chaseState._isInAttackRange = false;
             _animator.SetBool("Run", true);
             _navMeshAgent.isStopped = false;
+
             return _chaseState;
         }
-
-        _animator.SetBool("Run", false);
+        else
+        {
+            if (_shootCorotine == null)
+            {
+                _shootCorotine = StartCoroutine(TakeDamage());
+            }
+        }
+        
         return this;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.TryGetComponent(out Enemy enemy))
         {
@@ -51,7 +60,8 @@ public class AttackState : State
             {
                 if (_shootCorotine == null)
                 {
-                    _shootCorotine = StartCoroutine(TakeDamage());
+                    StopCoroutine(_shootCorotine);
+                    _currentAim = null;
                 }
             }
         }
@@ -59,7 +69,7 @@ public class AttackState : State
 
     private IEnumerator TakeDamage()
     {
-        while (_currentAim.Health > 0)
+        while (_currentAim.Health > 0 && _currentAim.gameObject.activeSelf)
         {
             _soldier.transform.LookAt(_currentAim.transform.position);
             _currentAim.TakeDamage(_soldier.Damage);
@@ -68,8 +78,7 @@ public class AttackState : State
 
             yield return new WaitForSeconds(_dalayShoot);
         }
+
         _currentAim = null;
-        _shootCorotine = null;
-        yield return null;
     }
 }
