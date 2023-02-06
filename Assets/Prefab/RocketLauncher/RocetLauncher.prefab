@@ -1808,7 +1808,7 @@ MonoBehaviour:
   _priseText: {fileID: 8155601455890503522}
   _moneyTaking: {fileID: 8155601454552425053}
   _objectBuy: {fileID: 9116251112847701556}
-  _priseUpgrade: 0f00000014000000
+  _priseUpgrade: 280000002d000000
   _placeMoveMoney: {fileID: 8155601456025841701}
   _upSound: {fileID: 4556674189270608128}
   _imageFiild: {fileID: 2260332658871959241}

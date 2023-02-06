@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 1.0464766, g: 0.8306375, b: 0.5675192, a: 1}
+  m_IndirectSpecularColor: {r: 1.0450884, g: 0.8353629, b: 0.5681285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -676,6 +676,10 @@ PrefabInstance:
     - target: {fileID: 6303707550234702968, guid: ef1f039db15378a4d98337109e2728c4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304635055741958444, guid: ef1f039db15378a4d98337109e2728c4, type: 3}
+      propertyPath: _priseUpgrade.Array.data[1]
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6304635055985368074, guid: ef1f039db15378a4d98337109e2728c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1637,6 +1641,10 @@ PrefabInstance:
       propertyPath: _destroyBox
       value: 
       objectReference: {fileID: 19836136, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
+    - target: {fileID: 3190398060985112635, guid: c8bac1fbd6dd8904d9e4aa4e918aabaa, type: 3}
+      propertyPath: _valueMoney
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3192087451563274306, guid: c8bac1fbd6dd8904d9e4aa4e918aabaa, type: 3}
       propertyPath: m_Name
       value: Box
@@ -2022,6 +2030,14 @@ PrefabInstance:
     - target: {fileID: 643336564396162957, guid: 61c3d2a83ee496b44a7c7d49f53102e8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 773351966764095575, guid: 61c3d2a83ee496b44a7c7d49f53102e8, type: 3}
+      propertyPath: _priseUpgrade.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 773351966764095575, guid: 61c3d2a83ee496b44a7c7d49f53102e8, type: 3}
+      propertyPath: _priseUpgrade.Array.data[1]
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 850895964910761184, guid: 61c3d2a83ee496b44a7c7d49f53102e8, type: 3}
       propertyPath: m_StaticEditorFlags
