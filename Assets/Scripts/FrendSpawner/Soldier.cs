@@ -11,6 +11,7 @@ public class Soldier : Health
     [SerializeField] private bool _isPlayer;
     [SerializeField] private GameObject _panelDie;
     [SerializeField] private ParticleSystem _dieEffect;
+    [SerializeField] private HitBullet _hitBullet;
 
     public Transform MovePoint { get; private set; }
     public Transform WarPoint { get; private set; }
@@ -35,6 +36,7 @@ public class Soldier : Health
     public override void TakeDamage(int damage)
     {
         _health -= damage;
+        _hitBullet.SetHitBullet();
 
         if (_health <= 0)
         {
