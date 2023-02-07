@@ -23,7 +23,6 @@ public class ChaseState : State
             {
                 _attackState._currentAim = _currentEnemy;
                 _currentEnemy = null;
-                _animator.SetBool("Run", false);
                 return _attackState;
             }
             else
