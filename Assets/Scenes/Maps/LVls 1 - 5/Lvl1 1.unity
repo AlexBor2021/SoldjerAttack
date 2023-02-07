@@ -6041,6 +6041,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8879466047558209262, guid: 9a473baacaa8db8488e7054e89048e4d, type: 3}
   m_PrefabInstance: {fileID: 181866287680145787}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3720631310027848761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3660148001005907297, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: _upSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660148001005907297, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: _priseText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826872, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_Name
+      value: SpawnerMeter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3660148001005907297, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
 --- !u!1001 &4409977826146472778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6248,3 +6314,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8bac1fbd6dd8904d9e4aa4e918aabaa, type: 3}
+--- !u!1 &7782746087232553985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6891501535841826872, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+  m_PrefabInstance: {fileID: 3720631310027848761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7782746087232553988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782746087232553985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c65bc9b05c3c1149b095b8f56b3bc3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fildImage: {fileID: 0}
+  _barak: {fileID: 0}
