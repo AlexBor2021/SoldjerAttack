@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 1.0464766, g: 0.8306375, b: 0.5675192, a: 1}
+  m_IndirectSpecularColor: {r: 1.0450884, g: 0.8353629, b: 0.5681285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4016,6 +4016,22 @@ PrefabInstance:
       propertyPath: _bagMoney
       value: 
       objectReference: {fileID: 1740579502}
+    - target: {fileID: 3204147541516732244, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_text
+      value: "\u0418\u0433\u0440\u0430\u0442\u044C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204147541516732244, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_fontSize
+      value: 13.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3204147541516732244, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d503f57e5d0b4c44d96b696eb8456851, type: 2}
+    - target: {fileID: 3204147541516732244, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -207224790480211405, guid: d503f57e5d0b4c44d96b696eb8456851, type: 2}
     - target: {fileID: 5803788283014506059, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
