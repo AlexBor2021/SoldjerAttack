@@ -11,9 +11,12 @@ public class FinishMenu : MonoBehaviour
     [SerializeField] private int _revardForLevel;
 
     private int _enemyKillCount;
+    private BarGold _barGold;
 
     private void OnEnable()
     {
+        _barGold = FindObjectOfType<BarGold>();
+        _barGold.TakeGold(_revardForLevel);
         RevardForLevel();
     }
 

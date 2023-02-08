@@ -6,14 +6,15 @@ public class MoveCameraForShowEnemy : MonoBehaviour
 {
     [SerializeField] private List<Transform> _points;
     [SerializeField] private GameObject _moveCamera;
-    [SerializeField] private MoverPlayer _moverPlayer;
     [SerializeField] private int _speed;
 
+    private MoverPlayer _moverPlayer;
     private int _numberPoint = 0;
     private const string _offObject = "OffObject";
 
     private void OnEnable()
     {
+        _moverPlayer = FindObjectOfType<MoverPlayer>();
         _moverPlayer.enabled = false;
     }
 

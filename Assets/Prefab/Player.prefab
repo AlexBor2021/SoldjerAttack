@@ -5115,6 +5115,7 @@ MonoBehaviour:
   _superPlayer: {fileID: 6050705611671183390}
   _playerEssy: {fileID: 6505482061138233105}
   _timeSuperPlayer: 5
+  _audioMixer: {fileID: 24100000, guid: 123093874b1409c4d91d5220069133fd, type: 2}
 --- !u!114 &6657707733230395194
 MonoBehaviour:
   m_ObjectHideFlags: 0
