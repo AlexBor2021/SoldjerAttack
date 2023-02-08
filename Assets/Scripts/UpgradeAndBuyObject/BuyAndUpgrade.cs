@@ -32,9 +32,8 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<BagMoney>(out BagMoney bagMoney))
+        if (other.TryGetComponent<BagMoney>(out _bagMoney))
         {
-            _bagMoney = bagMoney;
             TakeMoneyFromBag();
         }
     }
@@ -51,11 +50,8 @@ public abstract class BuyAndUpgrade : MonoBehaviour
 
         FildImage(_takeMoney);
 
-        _moneyTaking.text = _takeMoney.ToString();
-
         if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
-            _bagMoney.StopTakeMoney();
             _objectBuy.SetActive(true);
             _prise = 0;
             _takeMoney = 0;
@@ -66,8 +62,6 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         {
             if (_takeMoney == _priseUpgrade[0])
             {
-                if (_bagMoney != null)
-                    _bagMoney.StopTakeMoney();
                 _takeMoney = 0;
                 _priseUpgrade.RemoveAt(0);
                 TakeMoneyFromBag();
@@ -76,31 +70,25 @@ public abstract class BuyAndUpgrade : MonoBehaviour
                 _upSound.Play();
             }
         }
-    }
 
-    public bool CheckIsUpgrade()
-    {
-        if (_priseUpgrade.Count <= 0)
-        {
-            OffObject();
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        _moneyTaking.text = _takeMoney.ToString();
     }
 
     private void TakeMoneyFromBag()
     {
+        _bagMoney.StopTakeMoney();
+
         if (_prise > 0)
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _prise, this);
+            _priseText.text = _priseUpgrade[0].ToString();
+            Debug.Log(1);
         }
         else if(_priseUpgrade.Count > 0)
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _priseUpgrade[0], this);
             _priseText.text = _priseUpgrade[0].ToString();
+            Debug.Log(2);
         }
     }
 

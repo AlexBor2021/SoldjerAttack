@@ -22,7 +22,6 @@ public class SDKIntialize : MonoBehaviour
         yield return null;
 
         InputSystemKeyBoard = SetInputGameKeyBoard();
-
     }
     public bool SetInputGameKeyBoard()
     {
@@ -31,5 +30,4 @@ public class SDKIntialize : MonoBehaviour
 #endif
         return SystemInfo.deviceType == UnityEngine.DeviceType.Desktop;
     }
-
 }

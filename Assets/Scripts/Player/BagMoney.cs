@@ -31,6 +31,7 @@ public class BagMoney : MonoBehaviour
     }
     public void StopTakeMoney()
     {
+        Debug.Log(_takemoney);
         if (_takemoney != null)
             StopCoroutine(_takemoney);
     }
@@ -48,16 +49,16 @@ public class BagMoney : MonoBehaviour
                 if (_moneys.Count != 0)
                 {
                     _moneys[_moneys.Count - 1].Moving(parent);
+                    _moneys.RemoveAt(_moneys.Count - 1);
+                    ChengedBAgMoney?.Invoke(_moneys.Count);
+                    _heightY -= _heightDiference;
+
+                    buyAndUpgrade.CameMoney();
                 }
-                
-                _moneys.RemoveAt(_moneys.Count - 1);
-                ChengedBAgMoney?.Invoke(_moneys.Count);
-                _heightY -= _heightDiference;
-
-                buyAndUpgrade.CameMoney();
-
-                if (_moneys.Count == 0 || buyAndUpgrade.CheckIsUpgrade())
+                else
+                {
                     StopTakeMoney();
+                }
                
                 yield return new WaitForSeconds(0.3f);
             }
