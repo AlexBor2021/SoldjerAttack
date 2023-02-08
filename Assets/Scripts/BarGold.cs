@@ -7,8 +7,14 @@ public class BarGold : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _gold;
 
-    private int _goldCount;
+    private int _goldCount = 4000;
     public int GoldCount => _goldCount;
+
+    private void OnEnable()
+    {
+        _gold.text = _goldCount.ToString();
+    }
+
     public void TakeGold(int number)
     {
         _goldCount += number;
