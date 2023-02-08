@@ -47,5 +47,6 @@ public  class Spawner : MonoBehaviour
     public void Upgrade()
     {
         _delay--;
+        _spawnerMeter.UpLevel();
     }
 }

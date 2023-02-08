@@ -27,7 +27,7 @@ public class MoveCameraForShowEnemy : MonoBehaviour
             if (_numberPoint < _points.Count - 1)
                 _numberPoint++;
             else
-                Invoke(_offObject, 3f);
+                Invoke(_offObject, 2f);
         }
     }
 
