@@ -18,6 +18,7 @@ public class MoverPlayer : MonoBehaviour
         _keyBoordInput.Init(this);
 #elif UNITY_WEBGL && YANDEX_GAMES
         _setKeyboard = FindObjectOfType<SDKIntialize>().InputSystemKeyBoard;
+
         if (_setKeyboard)
         {
             _keyBoordInput.Init(this);

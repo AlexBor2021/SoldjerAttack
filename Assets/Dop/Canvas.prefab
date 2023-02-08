@@ -26958,7 +26958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabCargo: {fileID: 3192087451563274306, guid: c8bac1fbd6dd8904d9e4aa4e918aabaa, type: 3}
   _effectCreate: {fileID: 4204138325306368015, guid: 46faafc17284dfd45ba6067a4deb7716, type: 3}
-  _audioMixer: {fileID: 0}
+  _audioMixer: {fileID: 24100000, guid: 123093874b1409c4d91d5220069133fd, type: 2}
 --- !u!1 &8999486715561918819
 GameObject:
   m_ObjectHideFlags: 0

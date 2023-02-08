@@ -20,8 +20,8 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AmbientEquatorColor: {r: 0.8915094, g: 0.95660377, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_AmbientEquatorColor: {r: 0.44509804, g: 0.47843137, b: 0.5, a: 1}
   m_AmbientGroundColor: {r: 1, g: 0.7657233, b: 0.2971698, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 1.0464766, g: 0.8306375, b: 0.5675192, a: 1}
+  m_IndirectSpecularColor: {r: 1.0299854, g: 0.9305867, b: 0.7857844, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2946,6 +2946,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738799498185546400, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738799498185546401, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5399454435425647860, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
