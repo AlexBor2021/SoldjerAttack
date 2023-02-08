@@ -14,24 +14,23 @@ public class MoverPlayer : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_EDITOR
         _keyBoordInput.Init(this);
-//#if UNITY_EDITOR
-//        _keyBoordInput.Init(this);
-//#elif UNITY_WEBGL && YANDEX_GAMES
-//        _keyBoordInput.Init(this);
-//        //_setKeyboard = FindObjectOfType<SDKIntialize>().InputSystemKeyBoard;
+#elif YANDEX_GAMES
+        _setKeyboard = FindObjectOfType<SDKIntialize>().InputSystemKeyBoard;
 
-//        //Debug.Log(_setKeyboard + "инициальзация клавиатуры");
-//        //if (_setKeyboard)
-//        //{
-//        //    _keyBoordInput.Init(this);
-//        //}
-//        //else
-//        //{
-//        //    _variableJoystick.gameObject.SetActive(true);
-//        //    _variableJoystick.Init(this);
-//        //}
-//#endif
+        Debug.Log(_setKeyboard + " инициальзация клавиатуры!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        if (_setKeyboard)
+        {
+            _keyBoordInput.Init(this);
+        }
+        else
+        {
+            _variableJoystick.gameObject.SetActive(true);
+            _variableJoystick.Init(this);
+        }
+#endif
+        Debug.Log(_setKeyboard + " инициальзация клавиатуры???????????????????????????????????");
     }
 
     public void FixedUpdate()
