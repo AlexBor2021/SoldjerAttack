@@ -1470,7 +1470,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 903374690958739071, guid: 823e755e7a4f7914a9e830de063580d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 823e755e7a4f7914a9e830de063580d1, type: 3}
 --- !u!1 &265828312539075481 stripped
 GameObject:
@@ -1553,7 +1554,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5569583350660977306, guid: 253e4a0df063e554ca980d62a1f9e3f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 253e4a0df063e554ca980d62a1f9e3f1, type: 3}
 --- !u!1 &8944221537315774221 stripped
 GameObject:
@@ -1636,7 +1638,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5569583350660977306, guid: a6b37d4ca1638fe47a55fd1e8b38935a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a6b37d4ca1638fe47a55fd1e8b38935a, type: 3}
 --- !u!4 &225352589902472980 stripped
 Transform:
@@ -1728,6 +1731,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8976742079652786727}
     m_Modifications:
+    - target: {fileID: 2556626548945258806, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b04323d4b6a0d14bb2523a19bee6e4c, type: 3}
     - target: {fileID: 3552402291462356282, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
       propertyPath: m_Sprite
       value: 

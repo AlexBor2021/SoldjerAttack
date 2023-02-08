@@ -11,7 +11,7 @@ public class SupotCargo : MonoBehaviour
     [SerializeField] private AudioMixer _audioMixer;
 
     private Transform _player;
-    private const string _masterSound = "MasterSound";
+    private const string _masterSound = "Master";
 
     private void OnEnable()
     {

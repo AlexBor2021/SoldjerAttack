@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     private bool _isSuperPlayer;
     private const string _offSuperPlayer = "OffSuperPlayer";
-    private const string _masterSound = "MasterSound";
+    private const string _masterSound = "Master";
 
     public void SwitshSuperPlayer()
     {
@@ -48,6 +48,4 @@ public class Player : MonoBehaviour
         _playerEssy.SetActive(true);
         _superPlayer.SetActive(false);
     }
-
-    
 }
