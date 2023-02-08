@@ -24,6 +24,9 @@ public class PlayerPower : MonoBehaviour
     {
         if (_money.GoldCount >= _coast)
         {
+            _coast += 100;
+            _text.text = _coast.ToString();
+
             _player.UppSpeed(1);
             _money.GiveGald(_coast);
         }
