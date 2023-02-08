@@ -27,7 +27,7 @@ public class Box : MonoBehaviour
     {
         while (_valueMoney != 0)
         {
-            Vector3 point = new Vector3(transform.position.x + Random.RandomRange(0, 3), transform.position.y, transform.position.z + Random.RandomRange(0, 3));
+            Vector3 point = new Vector3(transform.position.x + Random.RandomRange(-3, 3), transform.position.y, transform.position.z + Random.RandomRange(0, 3));
             var money = Instantiate(_prefabMoney, transform.position, Quaternion.identity);
             money.transform.DOJump(point, 3f, 1, 0.2f);
             _valueMoney--;

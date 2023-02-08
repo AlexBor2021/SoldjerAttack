@@ -2780,7 +2780,6 @@ MonoBehaviour:
   - {fileID: 4437097936050735466}
   _currentLvl: 0
   _warPoints: {fileID: 0}
-  _spawnerMeter: {fileID: 1077301813}
 --- !u!1 &6304635056670255527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,7 +3025,7 @@ MonoBehaviour:
   _character: {fileID: 8697439319863891059, guid: b9ce74e79de7f324d8a652a21140be8e, type: 3}
   _delay: 4
   _spotForSpawn: {fileID: 6304635056626220214}
-  _spawnerMeter: {fileID: 1077301813}
+  _spawnerMeter: {fileID: 1499914686735500581}
 --- !u!1 &6304635057433823061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4113,11 +4112,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.97
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.05
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4149,15 +4148,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
---- !u!114 &3590315451979424212 stripped
+--- !u!114 &1499914686735500581 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3590315453252892375, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1499914685056373286, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
   m_PrefabInstance: {fileID: 2087687939}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c65bc9b05c3c1149b095b8f56b3bc3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &6891501535097171768 stripped
@@ -4165,25 +4164,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6891501535841826875, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
   m_PrefabInstance: {fileID: 2087687939}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6891501535097171771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6891501535841826872, guid: 7cded33140ddd7a4882f3d6287f4884d, type: 3}
-  m_PrefabInstance: {fileID: 2087687939}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1077301813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6891501535097171771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c65bc9b05c3c1149b095b8f56b3bc3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fildImage: {fileID: 3590315451979424212}
-  _levelSpawner: {fileID: 0}
 --- !u!1001 &6304635055741958439
 PrefabInstance:
   m_ObjectHideFlags: 0

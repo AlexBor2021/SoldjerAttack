@@ -7,7 +7,6 @@ public class SpotForSpawn : MonoBehaviour
     [SerializeField] private List<GameObject> _pointForBots;
     [SerializeField] private int _currentLvl;
     [SerializeField] private AllEnemySpawns _warPoints;
-    [SerializeField] private SpawnerMeter _spawnerMeter;
 
     private int _indexPoint = 0;
     private List<Transform> _activePointForBots = new();
@@ -73,7 +72,6 @@ public class SpotForSpawn : MonoBehaviour
         if (_currentLvl < _pointForBots.Count)
         {
             InitPointForBots();
-            _spawnerMeter.UpLevel();
         }
     }
 }
