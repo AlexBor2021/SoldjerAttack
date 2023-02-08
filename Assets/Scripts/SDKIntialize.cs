@@ -22,6 +22,7 @@ public class SDKIntialize : MonoBehaviour
         yield return null;
 
         InputSystemKeyBoard = SetInputGameKeyBoard();
+        Debug.Log(InputSystemKeyBoard + "инициальзация клавиатуры");
     }
     public bool SetInputGameKeyBoard()
     {

@@ -31,7 +31,6 @@ public class BagMoney : MonoBehaviour
     }
     public void StopTakeMoney()
     {
-        Debug.Log(_takemoney);
         if (_takemoney != null)
             StopCoroutine(_takemoney);
     }
