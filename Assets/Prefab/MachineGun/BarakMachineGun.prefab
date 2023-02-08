@@ -1017,6 +1017,10 @@ MonoBehaviour:
   - {fileID: 7675669204695174020}
   _currentLvl: 0
   _warPoints: {fileID: 0}
+  _activePointForBots:
+  - {fileID: 449574161469009592}
+  - {fileID: 5934330406832032705}
+  - {fileID: 3806231810668833348}
   _spawnerMeter: {fileID: 4926333511809176237}
 --- !u!1 &7137446026617991699
 GameObject:

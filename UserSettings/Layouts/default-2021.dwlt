@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 111
+  controlID: 24
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: NavMeshEditorWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,15 +68,15 @@ MonoBehaviour:
     y: 0
     width: 388
     height: 939
-  m_MinSize: {x: 301, y: 381}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 25
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 118
+  controlID: 26
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -404,23 +404,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Maps/LVls 1 - 5
+    - Assets/Prefab/TankAngar
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Maps/LVls 1 - 5
+  - Assets/Prefab/TankAngar
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\GitProgect\\\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439
     \u043F\u0440\u043E\u0435\u043A\u0442"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 666}
-    m_SelectedIDs: 88850000
-    m_LastClickedID: 34184
-    m_ExpandedIDs: 0000000026850000288500002a8500002c8500002e85000030850000328500003485000036850000388500003a8500003c8500003e8500008885000000ca9a3b
+    scrollPos: {x: 0, y: 420}
+    m_SelectedIDs: b89b0000
+    m_LastClickedID: 39864
+    m_ExpandedIDs: 00000000369b0000389b00003a9b00003c9b00003e9b0000409b0000429b0000449b0000469b0000489b00004a9b00004c9b00004e9b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -448,7 +448,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026850000288500002a8500002c8500002e85000030850000328500003485000036850000388500003a8500003c8500003e850000
+    m_ExpandedIDs: 00000000369b0000389b00003a9b00003c9b00003e9b0000409b0000429b0000449b0000469b0000489b00004a9b00004c9b00004e9b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -578,7 +578,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b050f4ff4880f4fff2adf4ffb6c7f4ff0e42f5ff82bbf5ff3634f6ffa8abf6ff501bf7ffea95f7ff0e1ff8ff9ea3f8ff9e1df9ff8c93f9ffdadef9ff760efaffee3dfaff8a6dfaff029dfaffbeb6faff70e4faff44fefafff21afbffa24afbff2a7afbffcea9fbff1ceffbffd01efcffac4efcff787cfcffc497fcfffc0dfdffb054fdff8087fdff06b7fdffc6e4fdff9e17feffa445feff665ffeff168dfeff68b1feff10dffeffcaf8feff3429ffff1643ffffd670ffffa88affff32b9ffffecd3ffff16fbffff4c030200920602006c140200e8140200ae150200e2150200
+      m_ExpandedIDs: d4f9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -755,8 +755,8 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 0}
+      displayed: 0
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Navmesh Display
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -31.2613, y: 11.457899, z: -18.968288}
+    m_Target: {x: -28.00022, y: 5.2004704, z: -7.490185}
     speed: 2
-    m_Value: {x: -31.2613, y: 11.457899, z: -18.968288}
+    m_Value: {x: -28.00022, y: 5.2004704, z: -7.490185}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -909,13 +909,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.39770094, y: 0.22850324, z: -0.102906376, w: 0.8826766}
+    m_Target: {x: 0.10058806, y: -0.03302856, z: 0.0033688063, w: 0.99441886}
     speed: 2
-    m_Value: {x: 0.39651257, y: 0.22732227, z: -0.10196431, w: 0.8835755}
+    m_Value: {x: 0.1020698, y: -0.0345133, z: 0.0035713112, w: 0.994172}
   m_Size:
     m_Target: 10
     speed: 2
-    m_Value: 10
+    m_Value: 3.2023766
   m_Ortho:
     m_Target: 0
     speed: 2
