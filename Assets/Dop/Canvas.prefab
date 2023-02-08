@@ -7578,6 +7578,7 @@ MonoBehaviour:
   _vicalsKill: {fileID: 8232882796826398808}
   _vicalsIcon: {fileID: 1455333492300421450}
   _revardForLevel: 100
+  _barGold: {fileID: 8020260220937750081}
 --- !u!1 &4012331543377049874
 GameObject:
   m_ObjectHideFlags: 0
