@@ -210,6 +210,10 @@ MonoBehaviour:
   - {fileID: 4345447702322851574}
   _currentLvl: 0
   _warPoints: {fileID: 0}
+  _activePointForBots:
+  - {fileID: 5289403932857701110}
+  - {fileID: 1303280824956015450}
+  _spawnerMeter: {fileID: 0}
 --- !u!1 &3831485159220954789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1485,7 @@ MonoBehaviour:
   _character: {fileID: 8955479892874494146, guid: 468d746d74d5733438500539f4df6640, type: 3}
   _delay: 3
   _spotForSpawn: {fileID: 5386438360776346859}
+  _spawnerMeter: {fileID: 0}
 --- !u!1 &9143108724691838825
 GameObject:
   m_ObjectHideFlags: 0
