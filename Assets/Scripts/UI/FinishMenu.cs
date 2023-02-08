@@ -16,6 +16,7 @@ public class FinishMenu : MonoBehaviour
     private void OnEnable()
     {
         _barGold = FindObjectOfType<BarGold>();
+        Debug.Log(_barGold);
         _barGold.TakeGold(_revardForLevel);
         RevardForLevel();
     }

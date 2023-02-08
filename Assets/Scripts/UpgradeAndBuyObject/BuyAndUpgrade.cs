@@ -70,6 +70,10 @@ public abstract class BuyAndUpgrade : MonoBehaviour
                 _upSound.Play();
             }
         }
+        if (_priseUpgrade.Count == 0 && _objectBuy.activeSelf)
+        {
+            OffObject();
+        }
 
         _moneyTaking.text = _takeMoney.ToString();
     }
