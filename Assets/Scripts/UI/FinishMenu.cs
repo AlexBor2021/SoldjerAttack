@@ -9,13 +9,12 @@ public class FinishMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _vicalsKill;
     [SerializeField] private GameObject _vicalsIcon;
     [SerializeField] private int _revardForLevel;
-    [SerializeField] private BarGold _barGold;
-
+    
+    private BarGold _barGold;
     private int _enemyKillCount;
 
     private void OnEnable()
     {
-        Debug.Log(_barGold);
         _barGold.TakeGold(_revardForLevel);
         RevardForLevel();
     }
