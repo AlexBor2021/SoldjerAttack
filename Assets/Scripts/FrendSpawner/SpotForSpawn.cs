@@ -7,26 +7,24 @@ public class SpotForSpawn : MonoBehaviour
     [SerializeField] private List<GameObject> _pointForBots;
     [SerializeField] private int _currentLvl;
     [SerializeField] private AllEnemySpawns _warPoints;
+    [SerializeField]private List<Transform> _activePointForBots = new();
     [SerializeField] private SpawnerMeter _spawnerMeter;
 
     private int _indexPoint = 0;
-    private List<Transform> _activePointForBots = new();
     private List<Soldier> _compliteSoldiers = new();
 
     private void Awake()
     {
-        InitPointForBots();
         _warPoints = FindObjectOfType<AllEnemySpawns>();
     }
 
-    private void InitPointForBots()
+    private void InitUpgragePointForBots()
     {
         for (int i = 0; i < _pointForBots[_currentLvl].transform.childCount; i++)
         {
             _activePointForBots.Add(_pointForBots[_currentLvl].transform.GetChild(i));
         }
     }
-
     public int GetAmountFreeSpace()
     {
         return _activePointForBots.Count - _indexPoint;
@@ -68,11 +66,12 @@ public class SpotForSpawn : MonoBehaviour
 
     public void UpgradePlaceInBarak()
     {
+        Debug.Log("Улучшение");
         _currentLvl++;
 
         if (_currentLvl < _pointForBots.Count)
         {
-            InitPointForBots();
+            InitUpgragePointForBots();
             _spawnerMeter.UpLevel();
         }
     }
