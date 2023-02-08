@@ -24,8 +24,12 @@ public class Soldier : Health
 
     public void SetStartPoint(Transform point, Transform warPoint)
     {
-        MovePoint = point;
-        WarPoint = warPoint;
+        if (point && warPoint != null)
+        {
+            MovePoint = point;
+            WarPoint = warPoint;
+        }
+      
     }
     
     public void ChangingBattlePoint(Transform warPoint)
