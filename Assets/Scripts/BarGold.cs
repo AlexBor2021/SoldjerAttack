@@ -8,7 +8,7 @@ public class BarGold : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _gold;
 
     private int _goldCount;
-
+    public int GoldCount => _goldCount;
     public void TakeGold(int number)
     {
         _goldCount += number;
