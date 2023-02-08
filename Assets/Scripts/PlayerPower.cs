@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerPower : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    private MoverPlayer _player;
+
+    private void Start()
+    {
+        _player = FindObjectOfType<MoverPlayer>();
+    }
 
     public void UpdateSpeed()
     {
-
+        _player.UppSpeed(1);
     }
 }

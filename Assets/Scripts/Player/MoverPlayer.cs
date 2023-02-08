@@ -49,6 +49,10 @@ public class MoverPlayer : MonoBehaviour
         }
     }
 
+    public void UppSpeed(float volume)
+    {
+        _speed += volume;
+    }
     public void SetDiractionMove(Vector3 diraction)
     {
         _directionMove = diraction;
