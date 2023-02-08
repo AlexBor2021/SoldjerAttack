@@ -9,19 +9,18 @@ public class SDKIntialize : MonoBehaviour
 {
     public bool InputSystemKeyBoard;
 
-
     private IEnumerator Start()
     {
         DontDestroyOnLoad(this.gameObject);
 
-#if UNITY_WEBGL && YANDEX_GAMES && !UNITY_EDITOR
-        yield return YandexGamesSdk.Initialize();
-#else
-        SceneManager.LoadScene(1);
+#if !UNITY_WEBGL || UNITY_EDITOR
+        yield break;
 #endif
-        yield return null;
+        yield return YandexGamesSdk.Initialize();
 
+        SceneManager.LoadScene(1);
         InputSystemKeyBoard = SetInputGameKeyBoard();
+        Debug.Log(InputSystemKeyBoard + "инициальзация клавиатуры");
     }
     public bool SetInputGameKeyBoard()
     {

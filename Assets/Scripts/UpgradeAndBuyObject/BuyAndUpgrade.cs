@@ -82,13 +82,11 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _prise, this);
             _priseText.text = _priseUpgrade[0].ToString();
-            Debug.Log(1);
         }
         else if(_priseUpgrade.Count > 0)
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _priseUpgrade[0], this);
             _priseText.text = _priseUpgrade[0].ToString();
-            Debug.Log(2);
         }
     }
 
