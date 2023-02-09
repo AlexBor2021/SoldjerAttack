@@ -39,7 +39,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<BagMoney>(out BagMoney bagMoney))
+        if (other.TryGetComponent<BagMoney>(out _bagMoney))
         {
             _bagMoney.StopTakeMoney();
         }
@@ -85,7 +85,6 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         if (_prise > 0)
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _prise, this);
-            _priseText.text = _priseUpgrade[0].ToString();
         }
         else if(_priseUpgrade.Count > 0)
         {
