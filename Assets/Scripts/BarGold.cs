@@ -15,6 +15,7 @@ public class BarGold : MonoBehaviour
     private void OnEnable()
     {
         _goldCount = DataGame.Gold.LoadGold();
+        _gold.text = _goldCount.ToString();
     }
 
     private void Start()
