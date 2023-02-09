@@ -41,21 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maps/Lvls 6 - 10/Level 10.unity
     guid: da076f9c54f0ce443b22bf3477128e14
-  - enabled: 1
-    path: Assets/Scenes/Maps/Lvls 11- 15/Level 11.unity
-    guid: d4309aa215256e4418db1c2c66b45383
-  - enabled: 1
-    path: Assets/Scenes/Maps/Lvls 11- 15/Level 12.unity
-    guid: 5ec57faf43e5bf445b4283d4e571ea1b
-  - enabled: 1
-    path: Assets/Scenes/Maps/Lvls 11- 15/Level 13.unity
-    guid: bade84e82df2a0641a1c13f61f465045
-  - enabled: 1
-    path: Assets/Scenes/Maps/Lvls 11- 15/Level 14.unity
-    guid: e54800f6946076846bf72f69a723fb2d
-  - enabled: 1
-    path: Assets/Scenes/Maps/Lvls 11- 15/Level 15.unity
-    guid: c281642d22bd0b34584ca02b77ac298e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: bde31d9a76a687d4c981f507c0231632, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: b607cec48af384141a94c6c2cdfde0db, type: 2}
