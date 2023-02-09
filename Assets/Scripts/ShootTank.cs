@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShootTank : MonoBehaviour
 {
     [SerializeField] private int _damage;
+    [SerializeField] private float _dalay;
     [SerializeField] private ParticleSystem _effectShoot;
     [SerializeField] private Rigidbody _playeRb;
     [SerializeField] private Transform _rotionMain;
@@ -68,7 +69,7 @@ public class ShootTank : MonoBehaviour
                 _shoot.Play();
             }
 
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(_dalay);
         }
 
         _enemy = null;

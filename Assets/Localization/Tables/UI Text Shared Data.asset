@@ -115,6 +115,14 @@ MonoBehaviour:
     m_Key: Support money
     m_Metadata:
       m_Items: []
+  - m_Id: 35890129886281728
+    m_Key: Show
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35892453245485056
+    m_Key: Hard player
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

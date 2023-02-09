@@ -12,6 +12,11 @@ public class BarGold : MonoBehaviour
     private int _goldCount;
     public int GoldCount => _goldCount;
 
+    private void OnEnable()
+    {
+        _goldCount = DataGame.Gold.LoadGold();
+    }
+
     private void Start()
     {
         if (Instance == null)
@@ -23,10 +28,7 @@ public class BarGold : MonoBehaviour
     {
         if (Instance == this)
         {
-            Debug.Log("дестрой");
-
             Instance = null;
-
         }
     }
 
@@ -34,13 +36,13 @@ public class BarGold : MonoBehaviour
     {
         _goldCount += number;
         _gold.text = _goldCount.ToString();
+        DataGame.Gold.SaveGold(_goldCount);
     }
 
     public void GiveGald(int number)
     {
         _goldCount -= number;
         _gold.text = _goldCount.ToString();
+        DataGame.Gold.SaveGold(_goldCount);
     }
-
-    
 }

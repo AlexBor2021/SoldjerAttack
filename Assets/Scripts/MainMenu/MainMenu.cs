@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private int _level = 2;
     public void PlayButoon()
     {
-        SceneManager.LoadScene(2);
+        if (DataGame.InfoLevel.LoadInfoLEvel() > 0)
+        {
+            _level = DataGame.InfoLevel.LoadInfoLEvel();
+        }
+
+        SceneManager.LoadScene(_level);
     }
     public void InfoButton()
     {

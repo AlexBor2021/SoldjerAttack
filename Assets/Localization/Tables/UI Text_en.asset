@@ -119,6 +119,14 @@ MonoBehaviour:
     m_Localized: Support money
     m_Metadata:
       m_Items: []
+  - m_Id: 35890129886281728
+    m_Localized: Show
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35892453245485056
+    m_Localized: Hard player
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

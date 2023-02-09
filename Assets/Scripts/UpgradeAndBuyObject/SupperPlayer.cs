@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class SupperPlayer : MonoBehaviour
 {
+    [SerializeField] private GameObject _panelSuperPlayer;
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Player>(out Player player))
         {
-            player.SwitshSuperPlayer();
+            _panelSuperPlayer.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent<Player>(out Player player))
+        {
+            _panelSuperPlayer.SetActive(false);
         }
     }
 }
