@@ -6248,7 +6248,7 @@ GameObject:
   - component: {fileID: 2731750744775623171}
   - component: {fileID: 8347611456397691698}
   - component: {fileID: 3536363457758650735}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BigGore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11059,7 +11059,7 @@ GameObject:
   - component: {fileID: 1255063891742316717}
   - component: {fileID: 5309809032762867980}
   - component: {fileID: 62757306212591849}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenBloodSplatCritical (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15870,7 +15870,7 @@ GameObject:
   - component: {fileID: 1158164841440764176}
   - component: {fileID: 4396102772873247938}
   - component: {fileID: 2894061132322129328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20622,7 +20622,7 @@ GameObject:
   - component: {fileID: 5854326964303087370}
   - component: {fileID: 1027817718913326856}
   - component: {fileID: 3012623934970659109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25471,7 +25471,7 @@ GameObject:
   - component: {fileID: 7503626054244981294}
   - component: {fileID: 3003407408990932175}
   - component: {fileID: 5302053826575920363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BigGore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30885,7 +30885,7 @@ GameObject:
   - component: {fileID: 3256984933183767578}
   - component: {fileID: 3735098529618060563}
   - component: {fileID: 8531129091998393719}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenBloodSplatCritical (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35696,7 +35696,7 @@ GameObject:
   - component: {fileID: 369022015762997133}
   - component: {fileID: 906532371729056041}
   - component: {fileID: 7463377721659646838}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreenBloodSplatCritical (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40571,7 +40571,7 @@ GameObject:
   - component: {fileID: 7328587701325569468}
   - component: {fileID: 4353059885221191731}
   - component: {fileID: 4004492440023570587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BigGore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45603,7 +45603,7 @@ GameObject:
   - component: {fileID: 6313426447816068171}
   - component: {fileID: 8417425076967914901}
   - component: {fileID: 3303423334515580833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

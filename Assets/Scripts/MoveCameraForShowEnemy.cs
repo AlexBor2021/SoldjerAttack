@@ -31,6 +31,11 @@ public class MoveCameraForShowEnemy : MonoBehaviour
         }
     }
 
+    public void SkipButton()
+    {
+        OffObject();
+    }
+
     private void OffObject()
     {
         _moverPlayer.enabled = true;
