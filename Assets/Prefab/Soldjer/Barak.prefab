@@ -2539,7 +2539,7 @@ MonoBehaviour:
   - {fileID: 6304635056394461433}
   - {fileID: 6304635056676308319}
   - {fileID: 6304635057028908780}
-  _spawnerMeter: {fileID: 0}
+  _spawnerMeter: {fileID: 1499914686735500581}
 --- !u!1 &6304635056670255527
 GameObject:
   m_ObjectHideFlags: 0
