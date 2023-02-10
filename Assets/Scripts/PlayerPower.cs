@@ -30,11 +30,11 @@ public class PlayerPower : MonoBehaviour
     {
         if (_money.GoldCount >= _coast)
         {
+            _money.GiveGald(_coast);
+            _player.UppSpeed(1);
             _coast += 100;
             _textCost.text = _coast.ToString();
 
-            _player.UppSpeed(1);
-            _money.GiveGald(_coast);
             DataGame.InfoLevel.SavePowerPlayerLevelandPrise(_level, _coast);
         }
     }
