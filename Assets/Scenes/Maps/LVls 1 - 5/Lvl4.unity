@@ -3001,6 +3001,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 661389308}
     m_Modifications:
+    - target: {fileID: 1345340745, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
+      propertyPath: _objectBuy
+      value: 
+      objectReference: {fileID: 1740579500}
+    - target: {fileID: 1345340745, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
+      propertyPath: _skinPlayerUograde
+      value: 
+      objectReference: {fileID: 1740579501}
+    - target: {fileID: 1345340745, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
+      propertyPath: _spotForSpawns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345340745, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
+      propertyPath: _spotForSpawns.Array.data[0]
+      value: 
+      objectReference: {fileID: 260291959}
+    - target: {fileID: 1345340745, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
+      propertyPath: _spotForSpawns.Array.data[1]
+      value: 
+      objectReference: {fileID: 203815022}
     - target: {fileID: 3552402291462356282, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3079,57 +3099,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
---- !u!1 &578350892 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7883829414172643344, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
-  m_PrefabInstance: {fileID: 578350891}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &578350893 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7883829412701717099, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
-  m_PrefabInstance: {fileID: 578350891}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &578350894 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7883829413502941012, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
-  m_PrefabInstance: {fileID: 578350891}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &578350895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578350892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f953b4d68e0f7e40a1da763ea9d8f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prise: 0
-  _priseText: {fileID: 578350894}
-  _moneyTaking: {fileID: 578350893}
-  _objectBuy: {fileID: 1740579500}
-  _priseUpgrade: 050000000a000000
-  _placeMoveMoney: {fileID: 578350896}
-  _upSound: {fileID: 1685772107}
-  _imageFiild: {fileID: 1685772108}
-  _skinPlayerUograde: {fileID: 1740579501}
-  _spotForSpawns:
-  - {fileID: 260291959}
-  - {fileID: 203815022}
 --- !u!4 &578350896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7883829414172643347, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
@@ -6235,22 +6204,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3747755314606828205, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
   m_PrefabInstance: {fileID: 1166977155}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1685772107 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2556626548945258806, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
-  m_PrefabInstance: {fileID: 578350891}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1685772108 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 222974186155122431, guid: 9a720bcae65e3764ea74571239f7133a, type: 3}
-  m_PrefabInstance: {fileID: 578350891}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1719410945
 PrefabInstance:
   m_ObjectHideFlags: 0
