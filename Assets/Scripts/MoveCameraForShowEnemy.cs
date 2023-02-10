@@ -5,7 +5,6 @@ using UnityEngine;
 public class MoveCameraForShowEnemy : MonoBehaviour
 {
     [SerializeField] private List<Transform> _points;
-    [SerializeField] private GameObject _buttonSkip;
     [SerializeField] private GameObject _moveCamera;
     [SerializeField] private int _speed;
 
@@ -16,7 +15,6 @@ public class MoveCameraForShowEnemy : MonoBehaviour
     private void OnEnable()
     {
         _moverPlayer = FindObjectOfType<MoverPlayer>();
-        _buttonSkip.SetActive(true);
         _moverPlayer.enabled = false;
     }
 

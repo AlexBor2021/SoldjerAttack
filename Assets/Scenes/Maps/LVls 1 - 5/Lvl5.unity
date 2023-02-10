@@ -5269,6 +5269,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1719129294217156053, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719129294217156053, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719129294217156053, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1174159744}
+    - target: {fileID: 1719129294217156053, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719129294217156053, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SkipButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719129294217156053, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MoveCameraForShowEnemy, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719129294217156053, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3449231207126877878, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -5730,11 +5758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c43932d6ed8990468f1bd8210a8f627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1166977157 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9097965378570085507, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
-  m_PrefabInstance: {fileID: 1166977155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1174159741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5838,6 +5861,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4409977826612313439, guid: dc709d244e5401749987a5020a26d4ae, type: 3}
   m_PrefabInstance: {fileID: 1174159741}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1174159744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4409977825525799945, guid: dc709d244e5401749987a5020a26d4ae, type: 3}
+  m_PrefabInstance: {fileID: 1174159741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87c5a2dbb5da034ca5241b32f5ec479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1179013121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6971,7 +7005,7 @@ PrefabInstance:
     - target: {fileID: 5566035128147264625, guid: 7315d5613ccc29844b5f26df3db15593, type: 3}
       propertyPath: _panelSuperPlayer
       value: 
-      objectReference: {fileID: 1166977157}
+      objectReference: {fileID: 0}
     - target: {fileID: 5566035128147264636, guid: 7315d5613ccc29844b5f26df3db15593, type: 3}
       propertyPath: m_Name
       value: SupperPlayer
