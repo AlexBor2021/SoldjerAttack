@@ -20,7 +20,7 @@ public class FinishMenu : MonoBehaviour
         _barGold.TakeGold(_revardForLevel);
         RevardForLevel();
 
-        DataGame.InfoLevel.SaveInfoLevel(SceneManager.GetActiveScene().buildIndex);
+        DataGame.InfoLevel.SaveInfoLevel(SceneManager.GetActiveScene().buildIndex+1);
     }
 
     public void NextButton()
