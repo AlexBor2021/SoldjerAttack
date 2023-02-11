@@ -52,19 +52,19 @@ public abstract class BuyAndUpgrade : MonoBehaviour
 
         if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
+            _bagMoney.StopTakeMoney();
             _objectBuy.SetActive(true);
             _prise = 0;
             _takeMoney = 0;
-            TakeMoneyFromBag();
             _upSound.Play();
         }
         else if(_priseUpgrade.Count > 0 && _objectBuy.activeSelf)
         {
             if (_takeMoney == _priseUpgrade[0])
             {
+                _bagMoney.StopTakeMoney();
                 _takeMoney = 0;
                 _priseUpgrade.RemoveAt(0);
-                TakeMoneyFromBag();
                 _currentLevelUpgrade++;
                 UpgradeObject();
                 _upSound.Play();
