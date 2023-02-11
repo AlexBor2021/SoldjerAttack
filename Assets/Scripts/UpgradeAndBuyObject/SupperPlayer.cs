@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SupperPlayer : MonoBehaviour
 {
-    [SerializeField] private GameObject _panelSuperPlayer;
-
+    private GameObject _panelSuperPlayer;
     private const string _panelTag = "PanelSuperPlayer";
 
     private void OnEnable()

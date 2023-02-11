@@ -48,8 +48,6 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     {
         _takeMoney++;
 
-        FildImage(_takeMoney);
-
         if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
             _bagMoney.StopTakeMoney();
@@ -75,6 +73,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
             OffObject();
         }
 
+        FildImage(_takeMoney);
         _moneyTaking.text = _takeMoney.ToString();
     }
 
@@ -96,6 +95,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     private void FildImage(float value)
     {
         float number;
+
         if (_prise != 0)
         {
             number = Mathf.InverseLerp(0, _prise, value);
@@ -104,6 +104,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         {
             number = Mathf.InverseLerp(0, _priseUpgrade[0], value);
         }
+
         _imageFiild.fillAmount = number;
     }
 

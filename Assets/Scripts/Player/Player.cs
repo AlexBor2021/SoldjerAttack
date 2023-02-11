@@ -15,33 +15,16 @@ public class Player : MonoBehaviour
     private const string _offSuperPlayer = "OffSuperPlayer";
     private const string _masterSound = "Master";
 
-    public void SwitshSuperPlayer()
+    public void SuperPlaer()
     {
-        VideoAd.Show(OffMusicVolume, Revard, OnMusicVolume);
-
-        void OffMusicVolume()
+        if (_isSuperPlayer == false)
         {
-            Time.timeScale = 0;
-            _audioMixer.SetFloat(_masterSound, -80);
-        }
-        void OnMusicVolume()
-        {
-            Time.timeScale = 1;
-            _audioMixer.SetFloat(_masterSound, 0);
-        }
-
-        void Revard()
-        {
-            if (_isSuperPlayer == false)
-            {
-                _isSuperPlayer = true;
-                _playerEssy.SetActive(false);
-                _superPlayer.SetActive(true);
-                Invoke(_offSuperPlayer, _timeSuperPlayer);
-            }
+            _isSuperPlayer = true;
+            _playerEssy.SetActive(false);
+            _superPlayer.SetActive(true);
+            Invoke(_offSuperPlayer, _timeSuperPlayer);
         }
     }
-
     private void OffSuperPlayer()
     {
         _isSuperPlayer = false;
