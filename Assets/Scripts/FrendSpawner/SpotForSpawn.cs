@@ -66,7 +66,6 @@ public class SpotForSpawn : MonoBehaviour
 
     public void UpgradePlaceInBarak()
     {
-        Debug.Log("Улучшение");
         _currentLvl++;
 
         if (_currentLvl < _pointForBots.Count)

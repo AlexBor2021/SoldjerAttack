@@ -7,9 +7,10 @@ using Agava.YandexGames;
 public class GeneralMarketing : MonoBehaviour
 {
     [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private FinishMenu _finishMenu;
     
     private Player _player;
-    private const string _masterSound = "MasterVolume";
+    private const string _masterSound = "Master";
 
     private void OnEnable()
     {
@@ -33,7 +34,7 @@ public class GeneralMarketing : MonoBehaviour
 
         void Revard()
         {
-
+            _finishMenu.RevardForLevel();
         }
     }
 
@@ -48,12 +49,10 @@ public class GeneralMarketing : MonoBehaviour
         }
         void OnMusicVolume(bool close)
         {
-            if (close)
-            {
-                Time.timeScale = 1;
-                _audioMixer.SetFloat(_masterSound, 0);
-            }
+            Time.timeScale = 1;
+            _audioMixer.SetFloat(_masterSound, 0);
         }
+
         void OnError(string error)
         {
             Debug.Log(error);

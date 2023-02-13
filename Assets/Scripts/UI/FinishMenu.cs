@@ -9,15 +9,17 @@ public class FinishMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _vicalsKill;
     [SerializeField] private GameObject _vicalsIcon;
     [SerializeField] private int _revardForLevel;
+    [SerializeField] private AudioSource _music;
 
     private int _enemyKillCount;
     private BarGold _barGold;
 
     private void OnEnable()
     {
+        _music.Stop();
+
         _barGold = BarGold.Instance;
-       
-        _barGold.TakeGold(_revardForLevel);
+
         RevardForLevel();
 
         DataGame.InfoLevel.SaveInfoLevel(SceneManager.GetActiveScene().buildIndex+1);
@@ -32,8 +34,10 @@ public class FinishMenu : MonoBehaviour
         _enemyKillCount++;
         _enemyKill.text = _enemyKillCount.ToString();
     }
-    private void RevardForLevel()
+
+    public void RevardForLevel()
     {
+        _barGold.TakeGold(_revardForLevel);
         _moneyText.text = _revardForLevel.ToString();
     }
 }

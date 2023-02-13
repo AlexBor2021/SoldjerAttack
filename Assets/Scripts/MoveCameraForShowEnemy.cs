@@ -11,11 +11,17 @@ public class MoveCameraForShowEnemy : MonoBehaviour
     private MoverPlayer _moverPlayer;
     private int _numberPoint = 0;
     private const string _offObject = "OffObject";
+    private GameObject _skipButton;
 
     private void OnEnable()
     {
         _moverPlayer = FindObjectOfType<MoverPlayer>();
         _moverPlayer.enabled = false;
+    }
+
+    private void Start()
+    {
+        _skipButton = GameObject.FindGameObjectWithTag("Skip");
     }
 
     private void Update()
@@ -39,6 +45,7 @@ public class MoveCameraForShowEnemy : MonoBehaviour
     private void OffObject()
     {
         _moverPlayer.enabled = true;
+        _skipButton.SetActive(false);
         _moveCamera.SetActive(false);
     }
 }

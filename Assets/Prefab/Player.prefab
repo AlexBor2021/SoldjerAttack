@@ -5202,7 +5202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 0
-  _health: 100
+  _health: 200
   _token: {fileID: 0}
   _isPlayer: 1
   _panelDie: {fileID: 0}
@@ -51956,7 +51956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
-  _dalay: 0
+  _dalay: 4
   _effectShoot: {fileID: 9198355585405981906}
   _playeRb: {fileID: 6657707733230395197}
   _rotionMain: {fileID: 8996453663416300811}

@@ -46,4 +46,29 @@ public static class DataGame
             return PlayerPrefs.GetInt(PowerPlayerPrise);
         }
     }
+
+    public class SettingsPlayer
+    {
+        public static string ValueMusic = "ValueMusic";
+        public static string ValueEffect = "ValueEffect";
+
+        public static void SaveValueMusic(float valueMusic)
+        {
+            PlayerPrefs.SetFloat(ValueMusic, valueMusic);
+        }
+        public static void SaveValueEffect(float valueEffect)
+        {
+            PlayerPrefs.SetFloat(ValueEffect, valueEffect);
+        }
+
+        public static float LoadMusicValue()
+        {
+            return PlayerPrefs.GetFloat(ValueMusic);
+        }
+
+        public static float LoadEffectValue()
+        {
+            return PlayerPrefs.GetFloat(ValueEffect);
+        }
+    }
 }

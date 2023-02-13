@@ -16,11 +16,22 @@ public class SoundValue : MonoBehaviour
     private const string _musicVolume = "Music";
     private const string _effectsVolume = "Effect";
 
-    
+    private void OnEnable()
+    {
+        if (DataGame.SettingsPlayer.LoadMusicValue() > 0)
+        {
+            _musicSlider.value = DataGame.SettingsPlayer.LoadMusicValue();
+            _music.audioMixer.SetFloat(_musicVolume, Mathf.Lerp(-60, 0, _musicSlider.value));
+        }
+        if (DataGame.SettingsPlayer.LoadEffectValue() > 0)
+        {
+            _effectsSlider.value = DataGame.SettingsPlayer.LoadEffectValue();
+            _effects.audioMixer.SetFloat(_effectsVolume, Mathf.Lerp(-60, 0, _effectsSlider.value));
+        }
+    }
+
     public void SetMusicSound()
     {
-        Debug.Log(_musicVolume);
-
         _music.audioMixer.SetFloat(_musicVolume, Mathf.Lerp(-60, 0, _musicSlider.value));
 
         if (_musicSlider.value > 0)
@@ -33,6 +44,8 @@ public class SoundValue : MonoBehaviour
             _musicOn.enabled = false;
             _musicOff.enabled = true;
         }
+
+        DataGame.SettingsPlayer.SaveValueMusic(_musicSlider.value);
     }
     public void SetEffectSound()
     {
@@ -48,5 +61,7 @@ public class SoundValue : MonoBehaviour
             _effectsOn.enabled = false;
             _effectsOff.enabled = true;
         }
+
+        DataGame.SettingsPlayer.SaveValueEffect(_effectsSlider.value);
     }
 }
