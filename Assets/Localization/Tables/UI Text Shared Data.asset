@@ -135,6 +135,30 @@ MonoBehaviour:
     m_Key: Skip
     m_Metadata:
       m_Items: []
+  - m_Id: 37387468548259840
+    m_Key: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37388094682349568
+    m_Key: TutMoney
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37388266799808512
+    m_Key: TutPlayerBarak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37388527433859072
+    m_Key: TutBarak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37388827049771008
+    m_Key: TutSuperP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37389109263515648
+    m_Key: TutAirDrop
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
