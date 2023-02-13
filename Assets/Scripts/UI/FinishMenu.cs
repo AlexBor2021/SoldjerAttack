@@ -9,12 +9,15 @@ public class FinishMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _vicalsKill;
     [SerializeField] private GameObject _vicalsIcon;
     [SerializeField] private int _revardForLevel;
+    [SerializeField] private AudioSource _music;
 
     private int _enemyKillCount;
     private BarGold _barGold;
 
     private void OnEnable()
     {
+        _music.Stop();
+
         _barGold = BarGold.Instance;
 
         RevardForLevel();
