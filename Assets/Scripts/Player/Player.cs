@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
 
     private bool _isSuperPlayer;
     private const string _offSuperPlayer = "OffSuperPlayer";
-    private const string _masterSound = "Master";
 
     public void SuperPlaer()
     {

@@ -24,6 +24,7 @@ public class PlayerPower : MonoBehaviour
         _money = FindObjectOfType<BarGold>();
 
         _textCost.text = _coast.ToString();
+        _textLevel.text = _level.ToString();
     }
 
     public void UpdateSpeed()
@@ -33,7 +34,9 @@ public class PlayerPower : MonoBehaviour
             _money.GiveGald(_coast);
             _player.UppSpeed(1);
             _coast += 100;
+
             _textCost.text = _coast.ToString();
+            _textLevel.text = _level.ToString();
 
             DataGame.InfoLevel.SavePowerPlayerLevelandPrise(_level, _coast);
         }
