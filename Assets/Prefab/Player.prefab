@@ -51956,7 +51956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 100
-  _dalay: 6
+  _dalay: 4
   _effectShoot: {fileID: 9198355585405981906}
   _playeRb: {fileID: 6657707733230395197}
   _rotionMain: {fileID: 8996453663416300811}

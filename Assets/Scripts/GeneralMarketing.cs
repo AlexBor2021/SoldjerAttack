@@ -10,7 +10,7 @@ public class GeneralMarketing : MonoBehaviour
     [SerializeField] private FinishMenu _finishMenu;
     
     private Player _player;
-    private const string _masterSound = "MasterVolume";
+    private const string _masterSound = "Master";
 
     private void OnEnable()
     {
