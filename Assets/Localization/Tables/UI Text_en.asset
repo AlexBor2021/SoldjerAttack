@@ -164,6 +164,10 @@ MonoBehaviour:
     m_Localized: Airdrop, additionally gives money for viewing ads
     m_Metadata:
       m_Items: []
+  - m_Id: 37464122728677376
+    m_Localized: The Rebel
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
