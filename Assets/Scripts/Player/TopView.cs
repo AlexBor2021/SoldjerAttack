@@ -6,7 +6,14 @@ using UnityEngine.UI;
 public class TopView : MonoBehaviour
 {
     [SerializeField] private Button _button;
-    [SerializeField] private GameObject _cameraUp;
+    
+    private GameObject _cameraUp;
+
+    private void OnEnable()
+    {
+        _cameraUp = GameObject.FindGameObjectWithTag("CameraUp");
+        _cameraUp.SetActive(false);
+    }
 
     public void Click()
     {
