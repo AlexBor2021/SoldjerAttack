@@ -20,7 +20,7 @@ public class FinishMenu : MonoBehaviour
 
         _barGold = BarGold.Instance;
 
-        RevardForLevel();
+        RevardForLevel(false);
 
         DataGame.InfoLevel.SaveInfoLevel(SceneManager.GetActiveScene().buildIndex+1);
     }
@@ -35,9 +35,17 @@ public class FinishMenu : MonoBehaviour
         _enemyKill.text = _enemyKillCount.ToString();
     }
 
-    public void RevardForLevel()
+    public void RevardForLevel(bool marketing)
     {
         _barGold.TakeGold(_revardForLevel);
-        _moneyText.text = _revardForLevel.ToString();
+
+        if (marketing)
+        {
+            _moneyText.text = (_revardForLevel*2).ToString();
+        }
+        else
+        {
+            _moneyText.text = _revardForLevel.ToString();
+        }
     }
 }

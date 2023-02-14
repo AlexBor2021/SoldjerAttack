@@ -168,6 +168,10 @@ MonoBehaviour:
     m_Localized: The Rebel
     m_Metadata:
       m_Items: []
+  - m_Id: 37703760051470336
+    m_Localized: Top view
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

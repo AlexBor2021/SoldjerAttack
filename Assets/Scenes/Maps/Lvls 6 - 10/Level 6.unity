@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8116779, g: 0.6561678, b: 0.48647106, a: 1}
+  m_IndirectSpecularColor: {r: 0.81229305, g: 0.65457165, b: 0.48629522, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5162,6 +5162,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2787934146738735689, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3449231207126877878, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -5201,6 +5205,14 @@ PrefabInstance:
     - target: {fileID: 4384127206947828075, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147717911468366133, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1098.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147717911468366133, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -362.3
       objectReference: {fileID: 0}
     - target: {fileID: 5778065243184789454, guid: aeed8023f82ce5f4797a78efd13e9ad0, type: 3}
       propertyPath: m_AnchorMax.y

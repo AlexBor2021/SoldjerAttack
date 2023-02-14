@@ -34,7 +34,7 @@ public class GeneralMarketing : MonoBehaviour
 
         void Revard()
         {
-            _finishMenu.RevardForLevel();
+            _finishMenu.RevardForLevel(true);
         }
     }
 
