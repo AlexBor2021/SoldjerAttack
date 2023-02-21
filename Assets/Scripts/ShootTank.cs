@@ -11,7 +11,7 @@ public class ShootTank : MonoBehaviour
     [SerializeField] private Rigidbody _playeRb;
     [SerializeField] private Transform _rotionMain;
     [SerializeField] private AudioSource _shoot;
-    [SerializeField] private AudioSource _move;
+    [SerializeField] private AudioSource _moveSound;
 
     private Enemy _enemy;
     private Coroutine _damageTakeCor;
@@ -29,13 +29,13 @@ public class ShootTank : MonoBehaviour
     {
         if (_playeRb.velocity.magnitude > 1 && _isPlay == false)
         {
-            _move.Play();
+            _moveSound.Play();
             _effectSmok.Play();
             _isPlay = true;
         }
         else if(_playeRb.velocity.magnitude == 0)
         {
-            _move.Stop();
+            _moveSound.Stop();
             _effectSmok.Stop();
             _isPlay = false;
         }

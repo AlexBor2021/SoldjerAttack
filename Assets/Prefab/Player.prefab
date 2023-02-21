@@ -52766,7 +52766,7 @@ MonoBehaviour:
   _playeRb: {fileID: 6657707733230395197}
   _rotionMain: {fileID: 8996453663416300811}
   _shoot: {fileID: 6002268418430573005}
-  _move: {fileID: 2980209817845500653}
+  _moveSound: {fileID: 2980209817845500653}
 --- !u!135 &1462681861
 SphereCollider:
   m_ObjectHideFlags: 0
