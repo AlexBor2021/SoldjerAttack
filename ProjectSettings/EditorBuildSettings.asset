@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 51f17bac347fb3946966e5de79e838f4
   - enabled: 1
-    path: Assets/Scenes/Maps/LVls 1 - 5/Lvl1 1.unity
+    path: Assets/Scenes/Maps/LVls 1 - 5/Lvl1 0.unity
     guid: fc1020d2e22143241a346ba04ea08776
   - enabled: 1
     path: Assets/Scenes/Maps/LVls 1 - 5/Lvl2.unity
