@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -20,6 +18,7 @@ public class PlayerPower : MonoBehaviour
             _coast = DataGame.InfoLevel.LoadPowerPlayerPrise();
             _level = DataGame.InfoLevel.LoadPowerPlayerLevel();
         }
+
         _player = FindObjectOfType<MoverPlayer>();
         _money = FindObjectOfType<BarGold>();
 
@@ -34,6 +33,7 @@ public class PlayerPower : MonoBehaviour
             _money.GiveGald(_coast);
             _player.UppSpeed(1);
             _coast += 100;
+            _level++;
 
             _textCost.text = _coast.ToString();
             _textLevel.text = _level.ToString();

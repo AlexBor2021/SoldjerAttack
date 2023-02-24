@@ -138,6 +138,7 @@ MonoBehaviour:
   _animator: {fileID: 3190398060985112580}
   _prefabMoney: {fileID: 1534019724721355480, guid: 9e91011a5f75b9f4f8766497a2588e3e, type: 3}
   _openSourse: {fileID: 3192497390010637273}
+  _despaperinceSound: {fileID: 8300000, guid: 8b3848d6900879843a1ffd2a0ce93090, type: 3}
   _destroyBox: {fileID: 19836136, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
 --- !u!1 &3192421315379608356
 GameObject:

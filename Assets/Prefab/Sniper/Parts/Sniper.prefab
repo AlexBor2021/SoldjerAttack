@@ -19485,7 +19485,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4872478976419517128
 GameObject:
@@ -30440,7 +30440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 20
-  _health: 20
+  _health: 15
   _token: {fileID: 3986475020106054337, guid: 9e91011a5f75b9f4f8766497a2588e3e, type: 3}
   _isPlayer: 0
   _panelDie: {fileID: 0}
@@ -46154,7 +46154,7 @@ MonoBehaviour:
   _attackState: {fileID: 1031536439645416447}
   _soldier: {fileID: 6955172495614803477}
   _animator: {fileID: 7912861162866758008}
-  _durationForPosition: 5
+  _durationForPosition: 7
   _navMeshAgent: {fileID: 2372744256283240}
   _isInAttackRange: 0
 --- !u!135 &7059624485023699517

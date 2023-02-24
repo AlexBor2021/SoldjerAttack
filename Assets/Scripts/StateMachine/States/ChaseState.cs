@@ -6,7 +6,7 @@ public class ChaseState : State
     [SerializeField] private AttackState _attackState;
     [SerializeField] private Soldier _soldier;
     [SerializeField] private Animator _animator;
-    [SerializeField] private float _durationForPosition = 3;
+    [SerializeField] private float _durationForPosition;
     [SerializeField] private NavMeshAgent _navMeshAgent;
 
     private Enemy _currentEnemy;
@@ -40,7 +40,7 @@ public class ChaseState : State
         _soldier.transform.LookAt(_currentEnemy.transform.position, Vector3.up);
         _navMeshAgent.SetDestination(_currentEnemy.transform.position);
 
-        if (Vector3.Distance(_soldier.transform.position, _currentEnemy.transform.position) < 6)
+        if (Vector3.Distance(_soldier.transform.position, _currentEnemy.transform.position) < _durationForPosition)
         {
             return true;
         }

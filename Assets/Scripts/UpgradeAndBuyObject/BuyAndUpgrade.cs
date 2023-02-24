@@ -35,6 +35,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         if (other.TryGetComponent<BagMoney>(out _bagMoney))
         {
             TakeMoneyFromBag();
+            Debug.Log(_bagMoney);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -42,14 +43,17 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         if (other.TryGetComponent<BagMoney>(out _bagMoney))
         {
             _bagMoney.StopTakeMoney();
+            Debug.Log(_bagMoney);
         }
     }
     public void CameMoney()
     {
         _takeMoney++;
 
+        Debug.Log(_bagMoney);
         if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
+            Debug.Log(_bagMoney);
             _bagMoney.StopTakeMoney();
             _objectBuy.SetActive(true);
             _prise = 0;
@@ -60,6 +64,7 @@ public abstract class BuyAndUpgrade : MonoBehaviour
         {
             if (_takeMoney == _priseUpgrade[0])
             {
+                Debug.Log(_bagMoney);
                 _bagMoney.StopTakeMoney();
                 _takeMoney = 0;
                 _priseUpgrade.RemoveAt(0);
