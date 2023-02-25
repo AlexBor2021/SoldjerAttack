@@ -16,8 +16,13 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     [SerializeField] protected Image _imageFiild;
 
     protected int _takeMoney;
-    protected BagMoney _bagMoney;
+    [SerializeField] protected BagMoney _bagMoney;
     protected int _currentLevelUpgrade = 1;
+
+    private void Awake()
+    {
+       _bagMoney = FindObjectOfType<BagMoney>();   
+    }
 
     private void OnEnable()
     {
@@ -32,25 +37,24 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<BagMoney>(out _bagMoney))
+        if (other.GetComponent<Player>())
         {
+
             TakeMoneyFromBag();
-            Debug.Log(_bagMoney);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<BagMoney>(out _bagMoney))
+        if (other.GetComponent<Player>())
         {
+            
             _bagMoney.StopTakeMoney();
-            Debug.Log(_bagMoney);
         }
     }
     public void CameMoney()
     {
         _takeMoney++;
 
-        Debug.Log(_bagMoney);
         if (_takeMoney == _prise && _objectBuy.activeSelf == false)
         {
             Debug.Log(_bagMoney);
@@ -85,7 +89,6 @@ public abstract class BuyAndUpgrade : MonoBehaviour
     private void TakeMoneyFromBag()
     {
         _bagMoney.StopTakeMoney();
-
         if (_prise > 0)
         {
             _bagMoney.TakeMoney(_placeMoveMoney, _prise, this);

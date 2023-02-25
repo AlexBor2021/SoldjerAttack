@@ -32,11 +32,24 @@ public class BagMoney : MonoBehaviour
     public void StopTakeMoney()
     {
         if (_takemoney != null)
+        {
             StopCoroutine(_takemoney);
+            _takemoney = null;
+        }
     }
     public void TakeMoney(Transform _placeMoveMoney, int price, BuyAndUpgrade buyAndUpgrade)
     {
-        _takemoney = StartCoroutine(TakingMoney(_placeMoveMoney, price, buyAndUpgrade));
+        if (_takemoney == null)
+        {
+            _takemoney = StartCoroutine(TakingMoney(_placeMoveMoney, price, buyAndUpgrade));
+        }
+        else
+        {
+            StopCoroutine(_takemoney);
+            _takemoney = null;
+            _takemoney = StartCoroutine(TakingMoney(_placeMoveMoney, price, buyAndUpgrade));
+
+        }
     }
 
     private IEnumerator TakingMoney(Transform parent, int price, BuyAndUpgrade buyAndUpgrade)
